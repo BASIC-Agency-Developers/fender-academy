@@ -324,5 +324,15 @@
 		}
 	};
 
+	FENDER.learn = {
+		init: function() {
+			var _this = this;
+
+			$('.lms_more').on('click', function(){
+				$('.grid_item-inactive').show();
+			});
+		},
+	};
+
 	FENDER.init();
 })( window, document );
