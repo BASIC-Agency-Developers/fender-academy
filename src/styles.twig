@@ -1,0 +1,57 @@
+{% extends 'layouts/default' %}
+
+{% set title     = 'Styles' %}
+{% set home      = 'true'    %}
+{% set id        = 'home'    %}
+{% set data_page = 'home'    %}
+
+{% block body %}
+	<div class="page" style="padding: 0 40px;">
+		<h1>H1 Headline</h1>
+		<h2>H2 Headline</h2>
+		<h3>H3 Headline</h3>
+		<h4>H4 Headline</h4>
+		<h5>H5 Headline</h5>
+		<h6>H6 Headline</h6>
+		<h6 class="h7">H7 Headline</h6>
+		<h6 class="h8">H8 Headline</h6>
+
+		<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+
+		<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+
+		<p><a class="btn" href="#">Standard CTA</a></p>
+
+		<p><a class="btn btn-more" href="#">Learn More</a></p>
+
+		<p><a class="btn btn-alt" href="#">Standard CTA</a></p>
+
+		<p class="bg" style="background: #1d1d1d; display: inline-block; padding: 10px;"><a class="btn btn-alt" href="#">Standard CTA</a></p>
+
+		<p><a class="btn btn-disabled" href="#">Select an answer to continue</a></p>
+
+		<p><a class="btn btn-disabled btn-locked" href="#">Locked</a></p>
+
+		<div class="vid">
+			<video class="vid_content" width="640" height="360">
+				<source src="/assets/vid/test.mp4" type="video/mp4" />
+			</video>
+
+			<div class="vid_controls">
+				<button type="button" class="vid_btn vid_play"><span class="icon vid_icn">Play</span></button>
+				<progress class="vid_progress" value="0" max="100"></progress>
+				<span class="vid_time"></span>
+				<div class="vid_volume">
+					<button type="button" class="vid_btn vid_mute"><span class="icon vid_icn">Mute</span></button>
+					<div class="vid_volbar">
+						<input type="range" class="vid_vol" value="1" min="0" max="1" step=".1" orientation="vertical" />
+					</div>
+				</div>
+				<button type="button" class="vid_btn vid_full"><span class="icon vid_icn">Full Screen</span></button>
+			</div><!-- /.vid_controls -->
+		</div><!-- /.vid -->
+
+		<div class="canvIq" data-iq="110" data-goal="200" data-size="35" data-dots="no"></div>
+		<div class="canvIq" data-iq="110" data-goal="200" data-size="106" data-dots="yes"></div>
+	</div>
+{% endblock %}

@@ -1,0 +1,81 @@
+/*-------------------------------------------
+  Learn - Courses, Chapters, etc.
+-------------------------------------------*/
+.lms {
+	background: $offwhite;
+	padding: em(80) 0 em(130);
+	text-align: center;
+
+	.dashboard & {
+		padding-top: em(100);
+	}
+}
+.lms_wrapper {
+	max-width: em(1060 + $gutters);
+}
+.lms_more {
+	display: none;
+}
+
+/*-------------------------------------------
+  Multiple Choice Questions
+-------------------------------------------*/
+.multiChoice_opt {
+	display: none;
+}
+.multiChoice_lbl {
+	display: block;
+	font-size: rem(13);
+	font-weight: 800;
+	text-align: left;
+	text-transform: uppercase;
+
+	.multiChoice_opt:checked + & {
+		background: $grey-dk;
+		color: $white;
+	}
+}
+
+// Trivia
+.trivia {
+	.multiChoice {
+		margin-bottom: 2.714285714em; // 38px
+	}
+	.question_lbl {
+		display: block;
+		@extend %h7; // font-size: 14px
+		line-height: 1.571428571em; // 22px
+		margin-bottom: 2.142857143em; // 30px
+		white-space: normal;
+		width: 100%;
+	}
+	.multiChoice_lbl {
+		border: 1px solid $text-lt;
+		padding: 14px 25px 13px;
+		margin-bottom: 10px;
+	}
+	.multiChoice_opt:checked {
+		+ .multiChoice_lbl {
+			background: none;
+			border-color: $accent;
+			box-shadow: inset -1px 0 0 0 $accent,
+						inset 1px 0 0 0 $accent,
+						inset 0 -1px 0 0 $accent,
+						inset 0 1px 0 0 $accent;
+		}
+	}
+}
+
+/*-------------------------------------------
+  Small Screen Styles
+-------------------------------------------*/
+@include max-down($tablet) {
+	.lms {
+		padding: em(34) 0 em(50);
+	}
+	.lms_more {
+		display: block;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}

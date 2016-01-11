@@ -1,0 +1,180 @@
+/*-------------------------------------------
+  Rewards
+-------------------------------------------*/
+.rewards {
+	background: $offwhite;
+	border-top: 1px solid $grey-lt;
+	overflow: hidden;
+	padding: em(100) 0 em(68);
+}
+.rewards_all {
+	position: absolute;
+	right: 20px;
+	top: 3.214285714em; // 45px
+}
+.reward_img {
+	margin-bottom: 15px;
+	position: relative;
+
+	&:before {
+		@include linear-gradient(165deg, transparentize($grey-dk, .2) 0%, transparentize($grey-dk, 1) 75%);
+		background-color: transparent;
+		content: '';
+		@extend %cover;
+	}
+
+	img {
+		display: block;
+		height: auto;
+		width: 100%;
+	}
+}
+.reward_cost {
+	color: $white;
+	left: 20px;
+	position: absolute;
+	top: 17px;
+
+	strong {
+		font-size: rem(20);
+		font-weight: normal;
+	}
+
+	&:before {
+		color: $accent;
+		content: 'i';
+		font-size: 18px;
+		margin-right: 9px;
+		top: 1px;
+		@extend %icn-fnt;
+	}
+}
+.reward_title {
+	margin-bottom: 2.285714286em // 32px
+}
+.reward_note {
+	color: $text-xlt;
+
+	&:before {
+		color: $grey;
+		content: ' | ';
+		font-size: 16px;
+		margin: 0 13px 0 15px;
+		position: relative;
+		top: -1px;
+	}
+}
+
+// Slider
+.rewards_wrap {
+	position: relative;
+
+	.slick-dots {
+		margin-top: em(70);
+	}
+}
+.rewards_btn {
+	margin-top: -115px;
+	position: absolute;
+	@extend %btn-reset;
+	@extend %center-vert;
+
+	&.slick-disabled {
+		cursor: default;
+		visibility: hidden;
+	}
+}
+.rewards_prev {
+	left: -30px;
+}
+.rewards_next {
+	right: -30px;
+}
+@include min-up(em(1300)) {
+	.rewards_prev {
+		left: -40px;
+	}
+	.rewards_next {
+		right: -40px;
+	}
+}
+@include min-up(em(1350)) {
+	.rewards_prev {
+		left: -60px;
+	}
+	.rewards_next {
+		right: -60px;
+	}
+}
+.rewards_icn {
+	&:before {
+		color: $text;
+		font-size: 18px;
+		@extend %icn-fnt;
+	}
+
+	.rewards_next & {
+		&:before {
+			content: 'n';
+		}
+	}
+	.rewards_prev & {
+		&:before {
+			content: 'p';
+		}
+	}
+}
+
+/*-------------------------------------------
+  Small Screen Styles
+-------------------------------------------*/
+@include max-down($tablet) {
+	/*-------------------------------------------
+	  Rewards
+	-------------------------------------------*/
+	.rewards {
+		padding: em(39) 0 em(28);
+	}
+	.rewards_head {
+		margin-bottom: em(37);
+		text-align: center;
+
+		.section-hdg {
+			margin-bottom: 1em; // 22px
+		}
+	}
+	.rewards_all {
+		display: inline-block;
+		position: static;
+	}
+	.reward {
+		text-align: center;
+
+		.btn {
+			display: block;
+		}
+		.btn-blank {
+			margin-top: -6px;
+			padding: 3px 0;
+		}
+	}
+	.reward_note {
+		&:before {
+			display: none;
+		}
+	}
+
+	// Slider
+	.rewards_btn {
+		display: none!important;
+	}
+}
+@include max-down($mobile) {
+	/*-------------------------------------------
+	  Rewards
+	-------------------------------------------*/
+	// Slider {
+	.rewards_wrap {
+		margin: 0 -20px;
+	}
+}

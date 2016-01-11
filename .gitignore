@@ -1,0 +1,31 @@
+.DS_Store
+
+# Grunt & Bower
+node_modules/
+bower_components/
+.sass-cache/
+
+# Images
+images/avatars/
+images/captchas/
+images/smileys/
+images/member_photos/
+images/signature_attachments/
+images/pm_attachments/
+
+# Caches
+_cached/
+_remote/
+thumbs/
+_thumbs/
+*/expressionengine/cache/*
+
+# Config
+config.local.php
+
+# Compiled Files
+content/
+src/assets/css/*css*
+src/assets/js/lib/
+src/assets/js/*.min.js
+src/assets/js/plugins.js

@@ -1,0 +1,56 @@
+/*-------------------------------------------
+  Avatar
+-------------------------------------------*/
+.avatar {
+	display: inline-block;
+	margin: 0;
+	position: relative;
+
+	&:before {
+		background: url(../img/global/avatar.png) no-repeat;
+		background-size: 100%;
+		content: '';
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	&.gold {
+		&:before {
+			background-image: url(../img/global/avatar-gold.png);
+		}
+	}
+	&.silver {
+		&:before {
+			background-image: url(../img/global/avatar-silver.png);
+		}
+	}
+	&.bronze {
+		&:before {
+			background-image: url(../img/global/avatar-bronze.png);
+		}
+	}
+}
+.avatar_img {
+	height: auto;
+	width: 100%;
+}
+
+// Certified Tag
+.cert {
+	background: $white;
+	color: $grey-dk;
+
+	&.gold {
+		background: $gold;
+	}
+	&.silver {
+		background: $silver;
+	}
+	&.bronze {
+		background: $bronze;
+	}
+}

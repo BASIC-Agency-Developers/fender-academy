@@ -1,0 +1,156 @@
+/*-------------------------------------------
+  Learn Cards
+-------------------------------------------*/
+.card {
+	background: $white;
+	border: 1px solid $grey-lt;	
+	box-shadow: 0px 2px 3px 0px transparentize($grey, .75);
+	text-align: left;
+	white-space: normal;
+}
+.card_img {
+	display: block;
+	position: relative;
+
+	&:after {
+		background: transparentize($grey-dk, .5);
+		content: '';
+		@extend %cover;
+	}
+
+	img {
+		display: block;
+		height: auto;
+		width: 100%;		
+	}
+}
+.card_copy,
+.card_lms {
+	padding: 32px 40px 20px;
+}
+.card_count {
+	color: $text-xlt;
+	display: inline-block;
+	font: rem(30) $display;
+	margin-bottom: .2em; // 6px
+	vertical-align: middle;
+}
+.card_note {
+	background: $text-xlt;
+	color: $white;
+	display: inline-block;
+	font-size: rem(10);
+	margin-left: 1em;
+	position: relative;
+	top: -.1em;
+	vertical-align: text-bottom;
+}
+.card_body {
+	margin-bottom: 3em; // 42px
+}
+.card_meta {
+	margin-bottom: em(12);
+}
+.card_lvl {
+	color: $text-lt;
+
+	&:after {
+		color: $grey-lt;
+		content: ' |';
+		margin: 0 7px;
+		position: relative;
+		top: -1px;
+	}
+}
+.card_time {
+	@extend %icn-before;
+
+	&:before {
+		background-position: 0 -22px;
+		height: 12px;
+		margin-right: 7px;
+		top: 1px;
+		width: 12px;
+		@extend %sprite;
+	}
+}
+.card_lms {
+	border-top: 1px solid $grey-xlt;
+	padding-top: 20px;
+	overflow: hidden;
+}
+.card_btn {
+	padding-left: 20px;
+	padding-right: 20px;
+	@extend %align-left;
+}
+.card_status {
+	letter-spacing: .05em;
+	line-height: 2.857142857; // 40px to match height of btn
+	white-space: nowrap;
+	@extend %align-right;
+
+	&.success {
+		color: $success;
+
+		i {
+			background-position: -22px -22px;
+			height: 12px;
+			margin-right: 3px;
+			top: 1px;
+			width: 12px;
+		}
+	}
+}
+
+// Coming Soon
+.card-inactive {
+	background: $offwhite;
+
+	.card_img {
+		&:after {
+			background-color: transparentize($white, .2);
+		}
+	}
+	.card_title,
+	.card_body,
+	.card_lms {
+		color: $text-xlt;
+	}
+	.card_body {
+		margin-bottom: 0;
+	}
+	.card_lms {
+		border-top: none;
+		padding-top: 0;
+	}
+	.card_status {
+		float: none;
+		@extend %h6;
+	}
+}
+
+/*-------------------------------------------
+  Small Screen Styles
+-------------------------------------------*/
+@include max-down($tablet) {
+	.card_copy {
+		padding: 25px 20px 20px;
+	}
+	.card_count {
+		font-size: rem(25);
+		margin-bottom: .44em; // 11px
+	}
+	.card_body {
+		margin-bottom: -.428571429em; // -6px
+	}
+	.card_meta {
+		margin-bottom: 0;
+	}
+	.card_lms {
+		padding: 20px;
+	}
+	.card_status {
+		font-size: rem(13);
+	}
+}

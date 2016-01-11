@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>{{ title }}</title>
+
+		<link rel="stylesheet" type="text/css" href="{{ assets }}/css/screen.css" media="screen" />
+
+		<link href="{{ assets }}/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script type="text/javascript" src="{{ assets }}/js/lib/modernizr.min.js"></script>
+
+		<!--[if (gte IE 6)&(lte IE 8)]>
+			<script type="text/javascript" src="{{assets}}/js/lib/selectivizr.min.js"></script>
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<script type="text/javascript" src="{{assets}}/js/lib/respond.min.js"></script>
+		<![endif]-->
+
+		<!-- Typekit -->
+		<script>
+			(function(d) {
+				var config = {
+					kitId: 'oos5bna',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+			})(document);
+		</script>
+	</head>
+
+	<body id="{{ id }}" data-page="{{ data_page }}" ng-app="FenderAcademy">
+
+		<div class="viewport">
+			{% include 'partials/header' %}
+
+			<section id="main" role="main">
+				{% block body %}
+				{% endblock %}
+			</section><!-- /#main -->
+
+			{% include 'partials/footer' %}
+
+			{% include 'partials/scripts' %}
+		</div><!-- /.viewport -->
+
+	</body>
+</html>

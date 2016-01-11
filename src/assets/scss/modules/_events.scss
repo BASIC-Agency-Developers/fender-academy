@@ -1,0 +1,59 @@
+/*-------------------------------------------
+  Events
+-------------------------------------------*/
+.event_head {
+	@extend %flex;
+}
+.event_time {
+	border-right: 1px solid $grey;
+	height: 4.571428571em; // 64px
+	width: 2.857142857em; // 40px
+}
+.event_date {
+	color: $text-lt;
+	display: inline-block;
+	font-family: $display;
+	margin-top: -.214285714em; // -3px
+	text-align: center;
+	text-transform: uppercase;
+	@extend %align-left;
+
+	abbr, strong, span {
+		display: block;
+		font-weight: normal;
+	}
+	abbr {
+		font-size: rem(16);
+		letter-spacing: 0.07em;
+		line-height: 1.1875em; // 19px
+	}
+	strong {
+		font-size: rem(30);
+		letter-spacing: 0.01em;
+		line-height: 1.133333333em; // 34px
+	}
+	span {
+		color: $text-xlt;
+		font-size: rem(14);
+		letter-spacing: 0.03em;
+		line-height: 1.357142857em; // 19px
+	}
+}
+.event_meta {
+	padding-left: 20px;
+	@include align-self(center);
+	height: 100%;
+	width: calc(100% - 40px);
+}
+
+/*-------------------------------------------
+  Brief (Event Module)
+-------------------------------------------*/
+.event-brief {
+	margin-bottom: 40px;
+	position: relative;
+
+	.event_title {
+		color: $accent;
+	}
+}

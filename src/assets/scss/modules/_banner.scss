@@ -1,0 +1,265 @@
+/*-------------------------------------------
+  Banner
+-------------------------------------------*/
+.banner {
+	background: $grey-dk;
+	color: $white;
+	position: relative;
+	text-align: center;
+
+	&:first-child {
+		margin-top: em(-70);
+		padding-top: em(70);
+	}
+
+	&:after {
+		@include linear-gradient(transparentize($grey-dk, .1), transparentize($grey-dk, 1));
+		background-color: transparent;
+		content: '';
+		@extend %cover;
+	}
+}
+.banner_wrapper {
+	height: em(330);
+
+	&:after {
+		clear: both;
+		content: '';
+		display: block;
+		height: 0;
+		visibility: hidden;
+	}
+}
+.banner_title {
+	font-weight: 800;
+	text-transform: uppercase;
+}
+.banner_tag,
+.banner_meta {
+	color: $text-xlt;
+}
+.banner_meta {
+	display: block;
+	font-weight: 700;
+	text-transform: uppercase;
+	@extend %h8; // font-size: 12px
+}
+.banner_copy {
+	position: relative;
+	z-index: 1;
+	@extend %center-vert;
+}
+.banner_body {
+	font-weight: 600;
+}
+.banner_bg {
+	&:after {
+		background: transparentize($grey-dk, .3);
+		content: '';
+		@extend %cover;
+	}
+}
+
+/*-------------------------------------------
+  Dashboard
+-------------------------------------------*/
+.banner-dashboard {
+	text-align: left;
+
+	&:first-child {
+		padding: em(150) 0 em(60);
+	}
+
+	&:after {
+		display: none;
+	}
+
+	.banner_wrapper {
+		height: auto;
+		max-width: em(1120);
+	}
+	.banner_tag {
+		margin-bottom: 1.142857143em;
+	}
+	.iq_img-sm {
+		display: none;
+	}
+}
+.banner_welcome {
+	padding-left: 160px;
+	padding-right: 40px;
+	position: relative;
+	width: calc(100% - 8.75em);
+	@extend %align-left;
+}
+.banner_avatar {
+	@extend %top-left;
+}
+.banner_cert {
+	bottom: em(-44);
+	position: absolute;
+	@extend %center-horiz;
+}
+.banner_greeting {
+	@extend %h1; // font-size: 55px
+	display: block;
+	margin-bottom: .6em; // 33px
+}
+.banner_location {
+	@extend %icn-before;
+
+	&:before {
+		background-position: -154px 0;
+		height: 10px;
+		width: 8px;
+		@extend %sprite;
+	}
+}
+.banner_iq {
+	margin-top: 8px;
+	width: em(140);
+	@extend %align-right;
+
+	.iq_lbl {
+		font-size: rem(45);
+	}
+}
+
+/*-------------------------------------------
+  Latest
+-------------------------------------------*/
+.banner-latest {
+	text-align: left;
+	
+	.banner_bg {
+			&:after {
+			background: transparentize($grey-dk, .9);
+			content: '';
+			@extend %cover;
+		}
+	}
+	.wrapper-content {
+		height: em(800);
+	}
+	.banner_copy {
+		max-width: em(420);
+	}
+	.banner_tag {
+		color: $white;
+		display: block;
+		margin-bottom: 1em;
+	}
+	.banner_title {
+		margin-bottom: .6em; // 24px
+	}
+}
+
+/*-------------------------------------------
+  Small Screen Styles
+-------------------------------------------*/
+@include max-down(em(1100)) {
+	/*-------------------------------------------
+	  Dashboard
+	-------------------------------------------*/
+	.banner_welcome {
+		margin-left: 20px;
+		width: calc(100% - 10em);
+	}
+}
+@include max-down($tablet) {
+	/*-------------------------------------------
+	  Banner
+	-------------------------------------------*/
+	.banner {
+		margin-top: em(-60);
+		padding-top: em(60);
+	}
+
+	/*-------------------------------------------
+	  Dashboard
+	-------------------------------------------*/
+	.banner-dashboard {
+		padding: em(30) 0 em(33);
+		text-align: center;
+
+		.banner_tag {
+			display: none;
+		}
+		.iq_img-lg {
+			display: none;
+		}
+		.iq_img-sm {
+			display: block;
+		}
+		.iq_lbl {
+			font-size: rem(20);
+			letter-spacing: .05em;
+		}
+	}
+	.banner_welcome {
+		float: none;
+		margin-left: 0;
+		padding: 0;
+		width: 100%;
+	}
+	.banner_avatar {
+		display: block;
+		margin: 0 auto 10px;
+		position: relative;
+
+		.avatar {
+			margin-bottom: 8px;
+			width: 80px
+		}
+	}
+	.banner_cert {
+		display: block;
+		margin: 0 auto em(26);
+		position: static;
+		@include transform(none);
+	}
+	.banner_greeting {
+		font-size: rem(27);
+		margin-bottom: .518518519em; // 14px
+	}
+	.banner_iq {
+		float: none;
+		width: 100%;
+	}
+	.banner_location {
+		font-size: rem(10);
+		margin-bottom: 1.7em; // 17px
+
+		&:before {
+			top: 1px;
+		}
+	}
+
+	/*-------------------------------------------
+	  Latest
+	-------------------------------------------*/
+	.banner-latest {
+		padding: 0;
+		text-align: center;
+
+		.banner_bg {
+			&:after {
+				background: transparentize($grey-dk, .3);
+			}
+		}
+		.wrapper-content {
+			height: em(325);
+		}
+		.banner_copy {
+			margin: 0 auto;
+		}
+		.banner_tag,
+		.banner_body {
+			display: none;
+		}
+		.vidLink {
+			display: block;
+			margin-top: 25px;
+		}
+	}
+}

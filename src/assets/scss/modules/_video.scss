@@ -1,0 +1,192 @@
+/*-------------------------------------------
+  Main Video
+-------------------------------------------*/
+.vid {
+	display: inline-block;
+	height: 0;
+	margin-bottom: 50px;
+	padding-bottom: 56.25%;
+	position: relative;
+	width: 100%;
+}
+.vid_content {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/*-------------------------------------------
+  Video Controls
+-------------------------------------------*/
+.vid_controls {
+	background: $grey-xxdk;
+	height: 50px;
+	left: 0;
+	position: absolute;
+	bottom: -50px;
+	width: 100%;
+	@extend %flex;
+	@extend %justify;
+}
+.vid_btn {
+	cursor: pointer;
+	height: 50px;
+	width: 60px;
+	@extend %btn-reset;
+}
+.vid_icn {
+	.vid_play & {
+		background-position: -97px 0;
+		height: 15px;
+		width: 7px;
+	}
+	.vid_pause & {
+		background-position: -114px 0;
+		height: 13px;
+		width: 9px;
+	}
+	.vid_mute & {
+		background-position: -41px 0;
+		height: 13px;
+		width: 17px;
+	}
+	.vid_full & {
+		background-position: -68px 0;
+		height: 13px;
+		width: 19px;
+	}
+}
+.vid_play {
+	border-right: 1px solid #343434;
+}
+.vid_mute,
+.vid_full {
+	border-left: 1px solid #343434;
+}
+
+// Progress Bar
+.vid_progress {
+	@include appearance(none);
+	border: none;
+	display: block;
+	height: 50px;
+	width: calc(100% - 285px);
+
+	&::-webkit-progress-bar {
+		background: $grey-xxdk;
+		position: relative;
+	}
+	&::-webkit-progress-bar::before,
+	&::-webkit-progress-value::before {
+		content: '';
+		background: #484848;
+		left: 0;
+		height: 3px;
+		margin-top: -1px;
+		position: absolute;
+		top: 50%;
+		width: 100%;
+	}
+	&::-webkit-progress-value {
+		background-size: 6px 6px;
+		@include linear-gradient(
+			135deg,
+			transparent 25%,
+			#4b1f1e 25%,
+			#4b1f1e 50%,
+			transparent 50%,
+			transparent 75%,
+			#4b1f1e 75%,
+			#4b1f1e
+		);
+		position: relative;
+	}
+	&::-webkit-progress-value::before {
+		background: $accent;
+		opacity: .8;
+	}
+}
+
+// Timestamp
+.vid_time {
+	@include align-self(center);
+	font-family: $display;
+	color: $grey;
+	text-align: center;
+	width: 105px;
+	@extend %h7;
+}
+.vid_current {
+	color: $white;
+}
+
+// Volume
+.vid_volume {
+	position: relative;
+
+	&:hover {
+		.vid_volbar {
+			display: block;
+		}
+	}
+}
+.vid_volbar {
+	background: $grey-xxdk;
+	display: none;
+	height: 105px;
+	left: 0;
+	overflow: hidden;
+	padding: 20px 0 0;
+	position: absolute;
+	top: -105px;
+	width: 100%;
+
+	&:before,
+	&:after {
+		background: $grey-xxdk;
+		content: '';
+		height: 20px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		z-index: 1;
+	}
+	&:before {
+		top: 0;
+	}
+	&:after {
+		bottom: 0;
+	}
+}
+.vid_vol {
+	@include appearance(none);
+	@include transform(rotate(270deg) translateX(-19px) translateY(-5px));
+	width: 65px;
+
+	&::-webkit-slider-runnable-track {
+		@include appearance(none);
+		background: $text-lt;
+		height: 3px;
+	}
+	&::-webkit-slider-thumb {
+		@include appearance(none);
+		background: $accent;
+		border: none;
+		cursor: pointer;
+		height: 9px;
+		margin-top: -3px;
+		position: relative;
+		width: 3px;
+	}
+	&::-webkit-slider-thumb::after {
+		background: $accent;
+		content: '';
+		height: 3px;
+		left: -105px;
+		position: absolute;
+		top: 3px;
+		width: 105px;
+	}
+}

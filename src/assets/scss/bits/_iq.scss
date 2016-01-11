@@ -1,0 +1,39 @@
+/*-------------------------------------------
+  IQ Progress
+-------------------------------------------*/
+.iq,
+.iq_wrap {
+	position: relative;
+	text-align: center;
+}
+.iq_wrap {
+	display: inline-block;
+	margin-bottom: 11px;
+}
+.iq_lbl {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	@extend %center-both;
+}
+.iq_title {
+	display: block;
+	font-family: $display;
+	@extend %h5; // font-size: 18px
+	font-weight: normal;
+	letter-spacing: .07em;
+	margin-bottom: .777777778em;
+	text-transform: uppercase;
+
+	&:before {
+		background-position: -173px 0;
+		content: 'i';
+		font-size: 16px;
+		margin-right: 7px;
+		top: 1px;
+		@extend %icn-fnt;
+	}
+}
+.iq_img {
+	position: relative;
+}

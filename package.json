@@ -1,0 +1,21 @@
+{
+  "name": "fender",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-ng-annotate": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-bower": "latest",
+    "node-bourbon": "latest",
+    "grunt-newer": "latest",
+    "grunt-notify": "latest",
+    "load-grunt-tasks": "latest",
+    "grunt-output-twig": "latest",
+    "grunt-sass": "~1.1.0",
+    "node-sass": "^3.2.0"
+  }
+}

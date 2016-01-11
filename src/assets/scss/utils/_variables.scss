@@ -1,0 +1,64 @@
+/*-------------------------------------------
+  Breakpoints
+-------------------------------------------*/
+$mobile: em(480);
+$mobile-lg: em(640);
+$tablet: em(768);
+$tablet-lg: em(900);
+$desktop: em(1024);
+$desktop-lg: em(1440);
+
+/*-------------------------------------------
+  Wrapper Gutter Width
+-------------------------------------------*/
+$gutters: 40;
+$gutter-px: 20px;
+
+/*-------------------------------------------
+  Stack Order
+-------------------------------------------*/
+$top: 5000; // Modals
+$middle: 3000; // Header
+
+/*-------------------------------------------
+  Colors
+-------------------------------------------*/
+$white: #fff;
+$offwhite: #f2f2f2;
+
+$grey-xlt: #eee;
+$grey-lt: #ddd;
+$grey: #bbb;
+$grey-dk: #1d1d1d;
+$grey-xdk: #121212;
+$grey-xxdk: #101010;
+
+$text: $grey-dk;
+$text-lt: #555;
+$text-xlt: #999;
+
+$brand: #e72b13;
+$accent: #f33d33;
+$accent-alt: #c42823;
+$success: #3fb36b;
+$bronze: #c58939;
+$silver: #b9bdc0;
+$gold: #d3b255;
+
+/*-------------------------------------------
+  Fonts
+-------------------------------------------*/
+// Open Sans (primary font-face)
+$sans-serif: 'open-sans', 'Open Sans', sans-serif;
+/*
+	Font Weights
+	Regular - 400
+	Semi Bold - 600
+	Extra Bold - 800
+*/
+
+// DIN Condensed Web (display font-face)
+$display: 'din-condensed-web', 'DIN Condensed', sans-serif;
+
+// Icon Font
+$icons: 'Fender Icons';

@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>Dashboard</title>
+
+		<link rel="stylesheet" type="text/css" href="/assets/css/screen.css" media="screen" />
+
+		<link href="/assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script type="text/javascript" src="/assets/js/lib/modernizr.min.js"></script>
+
+		<!--[if (gte IE 6)&(lte IE 8)]>
+			<script type="text/javascript" src="/assets/js/lib/selectivizr.min.js"></script>
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<script type="text/javascript" src="/assets/js/lib/respond.min.js"></script>
+		<![endif]-->
+
+		<!-- Typekit -->
+		<script>
+			(function(d) {
+				var config = {
+					kitId: 'oos5bna',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+			})(document);
+		</script>
+	</head>
+
+	<body id="dashboard" data-page="dashboard" ng-app="FenderAcademy">
+
+		<div class="viewport">
+			<header id="page-head" class="head">
+	<a class="nav-btn nav-btn-menu" href="#main-nav">Main Navigation</a>
+	<a class="nav-btn nav-btn-user" href="#user-nav">User Navigation</a>
+	<a class="nav-btn nav-btn-close" href="#main">Skip Navigation</a>
+
+	<a class="brand brand-head" href="/">
+		<h1 class="meta">Fender Academy</h1>
+		<img class="brand_img" src="/assets/img/global/logo.png" width="142" alt="The Fender Academy logo" />
+	</a><!-- /.brand -->
+
+	<nav id="main-nav" class="nav nav-main nav-head">
+		<h2 class="meta">Primary Navigation</h2>
+
+		<ul class="nav_list">
+			<li class="dropdown">
+				<a class="nav_item dropdown_btn page-btn" href="learn.html">Learn</a>
+
+				<ul class="dropdown_list">
+					<li><a href="chapter.html">Fender Fundamentals</a></li>
+					<li><a href="chapter.html">Electric Guitar</a></li>
+					<li><a href="chapter.html">Bass Guitar</a></li>
+					<li><a href="chapter.html">Amplifiers</a></li>
+					<li><a href="chapter.html">Acoustics</a></li>
+					<li><a href="chapter.html">Folk & Bluegrass</a></li>
+					<li><a href="chapter.html">Limited Edition</a></li>
+					<li><a href="#">+ See All</a></li>
+				</ul><!-- /.dropdown_list -->
+			</li>
+			<li class="dropdown">
+				<a class="nav_item dropdown_btn page-btn" href="latest.html">Latest</a>
+
+				<ul class="dropdown_list">
+					<li><a href="latest-category.html">Video</a></li>
+					<li><a href="latest-category.html">Products</a></li>
+					<li><a href="latest-category.html">Events</a></li>
+					<li><a href="latest-category.html">Spotlight</a></li>
+					<li><a href="latest-category.html">Rewards</a></li>
+					<li><a href="latest-archive.html">Archive</a></li>
+				</ul><!-- /.dropdown_list -->
+			</li>
+			<li class="dropdown">
+				<a class="nav_item dropdown_btn page-btn" href="resources.html">Resources</a>
+
+				<ul class="dropdown_list">
+					<li><a href="resources-calendar.html">Calendar</a></li>
+					<li><a href="resources-events.html">Events</a></li>
+				</ul><!-- /.dropdown_list -->
+			</li>
+			<li class="nonDropdown"><a class="nav_item page-btn" href="learn.html">Support</a></li>
+		</ul>
+	</nav><!-- /.mainNav -->
+
+	<nav id="user-nav" class="nav nav-user nav-head">
+		<h2 class="meta">User Navigation</h2>
+
+		<div class="dropdown nav_module nav_avatar">
+		
+			<!-- .avatar element can have classes gold, silver, or bronze to show different pick outlines -->
+			<figure class="avatar">
+				<img class="avatar_img" src="/assets/img/uploads/user-lg-01.jpg" width="32" height="32" alt="My avatar" />
+			</figure>
+
+			<span class="nav_item dropdown_btn"><span class="nav_uname">Adam</span></span>
+
+			<ul class="dropdown_list">
+				<li><a href="dashboard.html">Dashboard</a></li>
+				<li><a href="account.html">My Account</a></li>
+				<li><a href="#">Log Out</a></li>
+			</ul>
+		</div><!-- /.nav_avatar -->
+
+		<div class="nav_module nav_iq">
+			<div class="iq" data-pct="60">
+				<strong class="nav_iq_title iq_title">My Fender IQ</strong>
+
+				<div class="canvIq iq_img" data-iq="110" data-goal="200" data-size="35" data-dots="no">
+					<span class="iq_lbl tertiary">102</span>
+				</div>
+			</div><!-- /.iq -->
+		</div><!-- /.nav_iq -->
+	</nav><!-- /.userNav -->
+</header><!-- /#page-head -->
+			<section id="main" role="main">
+					<div class="banner banner-dashboard">
+		<div class="banner_wrapper wrapper">
+			<div class="banner_welcome">
+
+				<div class="banner_avatar">
+					<!-- avatar element can have classes gold, silver, or bronze to show different pick outlines -->
+					<figure class="avatar gold">
+						<img class="avatar_img" src="/assets/img/uploads/user-lg-01.jpg" width="92" height="92" alt="My avatar" />
+					</figure>
+
+					<div class="banner_cert">
+						<span class="avatar_cert cert gold pill">Fender Certified Gold</span>
+						<!--<span class="avatar_cert cert silver">Fender Certified Silver</span>
+						<span class="avatar_cert cert bronze">Fender Certified Bronze</span>-->
+					</div><!-- /.banner_cert -->
+				</div><!-- /.banner_avatar -->
+
+				<h1 class="title banner_tag tertiary">Dashboard</h1>
+				<strong class="banner_title banner_greeting">Hello, Adam</strong>
+				<span class="banner_meta banner_location">Grayson’s Tune Town | Melrose, CA</span>
+			</div><!-- /.banner_welcome -->
+
+			<div class="banner_iq iq">
+				<div class="iq_wrap">
+					<!-- Large Viewport IQ -->
+					<div class="canvIq iq_img iq_img-lg" data-iq="110" data-goal="200" data-size="106" data-dots="yes">
+						<span class="iq_lbl tertiary">102</span>
+					</div>
+
+					<!-- Small Viewport IQ -->
+					<div class="canvIq iq_img iq_img-sm" data-iq="110" data-goal="200" data-size="50" data-dots="no">
+						<span class="iq_lbl tertiary">102</span>
+					</div>
+				</div>
+
+				<strong class="iq_title">My Fender IQ</strong>
+				<a class="pageLink" href="#">See My Rewards</a>
+			</div><!-- /.banner_iq -->
+		</div><!-- /.banner_wrapper -->
+	</div><!-- /.banner -->
+
+	<section class="feed">
+		<h2 class="feed_hdg"><span class="feed_greet">Welcome back Adam, </span>check out the newest exclusives:</h2>
+
+		<div class="feed_wrap">
+			<ol class="feed_list">
+				<li>
+					<a class="feed_link" href="#">
+						<span class="feed_tag tertiary">Incentives Added</span>
+						<strong class="feed_title">Win Tickets to NAMM</strong>
+					</a>
+				</li>
+				<li>
+					<a class="feed_link" href="#">
+						<span class="feed_tag tertiary">Updated Lesson</span>
+						<strong class="feed_title">Electric Guitar Updated</strong>
+					</a>
+				</li>
+				<li>
+					<a class="feed_link" href="#">
+						<span class="feed_tag tertiary">New Exclusive Video</span>
+						<strong class="feed_title">Interview with Eric Clapton</strong>
+					</a>
+				</li>
+				<li>
+					<a class="feed_link" href="#">
+						<span class="feed_tag tertiary">New Interview</span>
+						<strong class="feed_title">Fender Master Builders</strong>
+					</a>
+				</li>
+				<li>
+					<a class="feed_link" href="#">
+						<span class="feed_tag tertiary">Incentives Added</span>
+						<strong class="feed_title">Win Tickets to Coachella</strong>
+					</a>
+				</li>
+				<li>
+					<a class="feed_link" href="#">
+						<span class="feed_tag tertiary">Updated Lesson</span>
+						<strong class="feed_title">Bass Guitar Updated</strong>
+					</a>
+				</li>
+				<li>
+					<a class="feed_link" href="#">
+						<span class="feed_tag tertiary">New Exclusive Video</span>
+						<strong class="feed_title">Interview with Jimi Hendrix</strong>
+					</a>
+				</li>
+				<li>
+					<a class="feed_link" href="#">
+						<span class="feed_tag tertiary">New Interview</span>
+						<strong class="feed_title">Fender Master Players</strong>
+					</a>
+				</li>
+			</ol><!-- /.feed_list -->
+
+			<button class="feed_btn feed_prev"><span class="feed_icn"><span class="meta">Previous</span></span></button>
+			<button class="feed_btn feed_next"><span class="feed_icn"><span class="meta">Next</span></span></button>
+		</div><!-- /.feed_wrap -->
+	</section><!-- /.feed -->
+
+	<div class="page">
+		<section id="learn" class="lms">
+			<div class="lms_wrapper wrapper">
+				<span class="section-tag tertiary">Get Fender Certified</span>
+				<h3 class="section-hdg">Learn</h3>
+
+				<aside class="callout bg">
+					<figure class="callout_bg bg_img">
+						<img src="/assets/img/uploads/callout-01.jpg" alt="Image description" />
+					</figure>
+
+					<div class="bg_copy">
+						<h6 class="callout_txt">Stay up-to-date on the latest, take the extra credit quiz!</h6>
+						<a class="btn btn-alt" href="latest.html">Visit Latest</a>
+						<a class="btn js-modal-btn" href="quiz.html">Take the Quiz</a>
+					</div>
+				</aside><!-- /.callout -->
+
+				<ol class="grid grid-cards grid-cards-alt">
+					<li class="grid_item">
+						<article class="card">
+							<figure class="card_img">
+								<img src="/assets/img/uploads/card-01.jpg" width="340" height="226" alt="Image description" />
+							</figure><!-- /.card_img -->
+
+							<div class="card_copy">
+								<span class="card_count">01</span>
+
+								<h5 class="card_title mod_title">Fender Brand</h5>
+
+								<div class="card_body mod_body">
+									<p>Learn about the early origins of Fender and how it has shaped our continued legacy today.</p>
+								</div><!-- /.card_body -->
+
+								<div class="card_meta tertiary">
+									<span class="card_lvl">Basic</span>
+									<span class="card_time mod_time">45 Mins</span>
+								</div><!-- /.card_meta -->
+							</div><!-- /.card_copy -->
+
+							<div class="card_lms">
+								<a class="btn card_btn" href="chapter.html">View 2 Lessons</a>
+							</div><!-- /.card_lms -->
+						</article><!-- /.card -->
+					</li>
+					<li class="grid_item">
+						<article class="card">
+							<figure class="card_img">
+								<img src="/assets/img/uploads/card-02.jpg" width="340" height="226" alt="Image description" />
+							</figure><!-- /.card_img -->
+
+							<div class="card_copy">
+								<span class="card_count">02</span>
+								
+								<h5 class="card_title mod_title">Electric Guitar</h5>
+
+								<div class="card_body mod_body">
+									<p>Learn about the early origins of Fender and how it has shaped our continued legacy today.</p>
+								</div><!-- /.card_body -->
+
+								<div class="card_meta tertiary">
+									<span class="card_lvl">Basic</span>
+									<span class="card_time mod_time">45 Mins</span>
+								</div><!-- /.card_meta -->
+							</div><!-- /.card_copy -->
+
+							<div class="card_lms">
+								<a class="btn card_btn" href="chapter.html">View 2 Lessons</a>
+							</div><!-- /.card_lms -->
+						</article><!-- /.card -->
+					</li>
+					<li class="grid_item">
+						<article class="card">
+							<figure class="card_img">
+								<img src="/assets/img/uploads/card-03.jpg" width="340" height="226" alt="Image description" />
+							</figure><!-- /.card_img -->
+
+							<div class="card_copy">
+								<span class="card_count">03</span>
+								
+								<h5 class="card_title mod_title">Bass Guitar</h5>
+
+								<div class="card_body mod_body">
+									<p>Learn about the early origins of Fender and how it has shaped our continued legacy today.</p>
+								</div><!-- /.card_body -->
+
+								<div class="card_meta tertiary">
+									<span class="card_lvl">Basic</span>
+									<span class="card_time mod_time">45 Mins</span>
+								</div><!-- /.card_meta -->
+							</div><!-- /.card_copy -->
+
+							<div class="card_lms">
+								<a class="btn card_btn" href="chapter.html">View 2 Lessons</a>
+								<span class="card_status success tertiary"><i class="icon">check</i> Test Complete</span>
+							</div><!-- /.card_lms -->
+						</article><!-- /.card -->
+					</li>
+					<li class="grid_item">
+						<article class="card">
+							<figure class="card_img">
+								<img src="/assets/img/uploads/card-04.jpg" width="340" height="226" alt="Image description" />
+							</figure><!-- /.card_img -->
+
+							<div class="card_copy">
+								<span class="card_count">04</span>
+								
+								<h5 class="card_title mod_title">Amplifiers</h5>
+
+								<div class="card_body mod_body">
+									<p>Learn about the early origins of Fender and how it has shaped our continued legacy today.</p>
+								</div><!-- /.card_body -->
+
+								<div class="card_meta tertiary">
+									<span class="card_lvl">Basic</span>
+									<span class="card_time mod_time">45 Mins</span>
+								</div><!-- /.card_meta -->
+							</div><!-- /.card_copy -->
+
+							<div class="card_lms">
+								<a class="btn card_btn" href="chapter.html">View 2 Lessons</a>
+							</div><!-- /.card_lms -->
+						</article><!-- /.card -->
+					</li>
+					<li class="grid_item">
+						<article class="card">
+							<figure class="card_img">
+								<img src="/assets/img/uploads/card-05.jpg" width="340" height="226" alt="Image description" />
+							</figure><!-- /.card_img -->
+
+							<div class="card_copy">
+								<span class="card_count">05</span>
+								
+								<h5 class="card_title mod_title">Acoustic Guitars</h5>
+
+								<div class="card_body mod_body">
+									<p>Learn about the early origins of Fender and how it has shaped our continued legacy today.</p>
+								</div><!-- /.card_body -->
+
+								<div class="card_meta tertiary">
+									<span class="card_lvl">Basic</span>
+									<span class="card_time mod_time">45 Mins</span>
+								</div><!-- /.card_meta -->
+							</div><!-- /.card_copy -->
+
+							<div class="card_lms">
+								<a class="btn card_btn" href="chapter.html">View 2 Lessons</a>
+							</div><!-- /.card_lms -->
+						</article><!-- /.card -->
+					</li>
+					<li class="grid_item">
+						<article class="card">
+							<figure class="card_img">
+								<img src="/assets/img/uploads/card-06.jpg" width="340" height="226" alt="Image description" />
+							</figure><!-- /.card_img -->
+
+							<div class="card_copy">
+								<span class="card_count">06</span>
+								
+								<h5 class="card_title mod_title">Limited Edition</h5>
+
+								<div class="card_body mod_body">
+									<p>Learn about the early origins of Fender and how it has shaped our continued legacy today.</p>
+								</div><!-- /.card_body -->
+
+								<div class="card_meta tertiary">
+									<span class="card_lvl">Basic</span>
+									<span class="card_time mod_time">45 Mins</span>
+								</div><!-- /.card_meta -->
+							</div><!-- /.card_copy -->
+
+							<div class="card_lms">
+								<a class="btn card_btn" href="chapter.html">View 2 Lessons</a>
+							</div><!-- /.card_lms -->
+						</article><!-- /.card -->
+					</li>
+				</ol><!-- /.grid -->
+
+				<a class="btn btn-alt" href="learn.html">All Learn Chapters</a>
+			</div><!-- /.lms_wrapper -->
+		</section><!-- /#learn -->
+
+		<section id="latest" class="latest">
+			<div class="latest_head wrapper wrapper-content">
+				<span class="section-tag tertiary">Keep Up-To-Date</span>
+				<h3 class="section-hdg">Latest Exclusives</h3>
+				<a class="pageLink tertiary latest_all" href="latest.html">View All Latest</a>
+			</div><!-- /.latest_head -->
+
+			<div class="banner banner-latest bg">
+				<figure class="banner_bg bg_img">
+					<img src="/assets/img/uploads/banner-01.jpg" alt="Image description" />
+				</figure>
+
+				<div class="wrapper wrapper-content">
+					<div class="banner_copy bg_copy">
+						<span class="banner_tag tertiary">Featured</span>
+						<h2 class="banner_title">Behind the Scenes With the Fender Master Builders</h2>
+
+						<div class="banner_body">
+							<p>Go behind-the-scenes and learn the techniques of the Fender Master Builders lorem ipsum dolor sit el amet consectetur Lorem ipsum dolor sit amet, consectetur.</p>
+						</div><!-- /.banner_body -->
+
+						<a class="vidLink js-modal-vid" href="modal-video.html"><i class="vidLink_icn">v</i>Watch Video</a>
+					</div><!-- /.banner_copy -->
+				</div><!-- /.wrapper -->
+			</div><!-- /.banner -->
+
+			<div class="latest_posts wrapper wrapper-content">
+				<div class="latest_primary primary">
+					<ol class="latest_list">
+						<li>
+							<article class="post">
+								<figure class="post_img">
+									<a class="js-modal-btn" href="latest-entry.html">
+										<img src="/assets/img/uploads/post-01.jpg" width="400" height="268" alt="Image description" />
+									</a>
+								</figure><!-- /.post_img -->
+
+								<div class="post_copy">
+									<div class="post_meta tertiary">
+										<a class="post_cat" href="latest-category.html">Products</a>
+										<time class="post_date mod_time">Nov 02, 2015</time>
+									</div><!-- /.post_meta -->
+
+									<h5 class="post_title mod_title"><a class="titleLink js-modal-btn" href="latest-entry.html">A Look At The New Jimi Hendrix Stratocaster Guitar</a></h5>
+
+									<div class="post_excerpt mod_body">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+									</div><!-- /.post_excerpt -->
+
+									<a class="btn btn-alt js-modal-btn" href="latest-entry.html">Read More</a>
+								</div><!-- /.post_copy -->
+							</article><!-- /.post -->
+						</li>
+						<li>
+							<article class="post">
+								<figure class="post_img">
+									<a class="js-modal-btn" href="latest-entry.html">
+										<img src="/assets/img/uploads/post-02.jpg" width="400" height="268" alt="Image description" />
+									</a>
+								</figure><!-- /.post_img -->
+
+								<div class="post_copy">
+									<div class="post_meta tertiary">
+										<a class="post_cat" href="latest-category.html">Events</a>
+										<time class="post_date mod_time">Nov 02, 2015</time>
+									</div><!-- /.post_meta -->
+
+									<h5 class="post_title mod_title"><a class="titleLink js-modal-btn" href="latest-entry.html">Fender Conquers At SXSW</a></h5>
+
+									<div class="post_excerpt mod_body">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+									</div><!-- /.post_excerpt -->
+
+									<a class="btn btn-alt js-modal-btn" href="latest-entry.html">Read More</a>
+								</div><!-- /.post_copy -->
+							</article><!-- /.post -->
+						</li>
+						<li>
+							<article class="post">
+								<figure class="post_img">
+									<a class="js-modal-btn" href="latest-entry.html">
+										<img src="/assets/img/uploads/post-03.jpg" width="400" height="268" alt="Image description" />
+									</a>
+								</figure><!-- /.post_img -->
+
+								<div class="post_copy">
+									<div class="post_meta tertiary">
+										<a class="post_cat" href="latest-category.html">Spotlight</a>
+										<time class="post_date mod_time">Nov 02, 2015</time>
+									</div><!-- /.post_meta -->
+
+									<h5 class="post_title mod_title"><a class="titleLink js-modal-btn" href="latest-entry.html">California’s Top Retailer Gets A Unique Surprise</a></h5>
+
+									<div class="post_excerpt mod_body">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+									</div><!-- /.post_excerpt -->
+
+									<a class="btn btn-alt js-modal-btn" href="latest-entry.html">Read More</a>
+								</div><!-- /.post_copy -->
+							</article><!-- /.post -->
+						</li>
+					</ol><!-- /.posts -->
+				</div><!-- /.primary -->
+
+				<div class="latest_secondary secondary">
+					<section class="secondary_section">
+						<div class="secondary_head">
+							<h6 class="secondary_hdg">Calendar</h6>
+							<a class="secondary_link pageLink tertiary" href="calendar.html">See All Events</a>
+						</div><!-- /.secondary_head -->
+
+						<div class="secondary_copy">
+							<ol class="events events-mod">
+								<li>
+									<article class="event event-brief">
+										<header class="event_head">
+											<div class="event_time">
+												<time class="event_date">
+													<abbr title="November">Nov</abbr>
+													<strong>02</strong>
+													<span>2015</span>
+												</time><!-- /.event_date -->
+											</div><!-- /.event_time -->
+
+											<div class="event_meta">
+												<span class="event_cat tertiary">New Product</span>
+												<h6 class="event_title h7">Amp: Bassbreaker</h6>
+												<a class="event_link cover js-modal-btn" href="calendar-detail.html">Read More</a>
+											</div><!-- /.event_meta -->
+										</header><!-- /.event_head -->
+									</article><!-- /.event -->
+								</li>
+								<li>
+									<article class="event event-brief">
+										<header class="event_head">
+											<div class="event_time">
+												<time class="event_date">
+													<abbr title="January">Jan</abbr>
+													<strong>10</strong>
+													<span>2016</span>
+												</time><!-- /.event_date -->
+											</div><!-- /.event_time -->
+
+											<div class="event_meta">
+												<span class="event_cat tertiary">New Product</span>
+												<h6 class="event_title h7">Guitar: American Elite Series</h6>
+												<a class="event_link cover js-modal-btn" href="calendar-detail.html">Read More</a>
+											</div><!-- /.event_meta -->
+										</header><!-- /.event_head -->
+									</article><!-- /.event -->
+								</li>
+								<li>
+									<article class="event event-brief">
+										<header class="event_head">
+											<div class="event_time">
+												<time class="event_date">
+													<abbr title="January">Jan</abbr>
+													<strong>24</strong>
+													<span>2016</span>
+												</time><!-- /.event_date -->
+											</div><!-- /.event_time -->
+
+											<div class="event_meta">
+												<span class="event_cat tertiary">Event</span>
+												<h6 class="event_title h7">NAMM Show 2016</h6>
+												<a class="event_link cover js-modal-btn" href="calendar-detail.html">Read More</a>
+											</div><!-- /.event_meta -->
+										</header><!-- /.event_head -->
+									</article><!-- /.event -->
+								</li>
+							</ol><!-- /.events -->
+						</div><!-- /.secondary_copy -->
+					</section><!-- /.secondary_section -->
+
+					<aside class="trivia bg" ng-controller="triviaController" ng-init="init()">
+						<figure class="trivia_bg bg_img" ng-hide="showForm || results">
+							<img src="/assets/img/uploads/trivia-bg-01.jpg" alt="Image description" />
+						</figure><!-- /.bg_img -->
+
+						<div class="bg_copy">
+							<h6 class="trivia_hdg" ng-hide="results">Fender Weekly Trivia</h6>
+
+							<div class="trivia_intro" ng-hide="showForm || results">
+								<p class="trivia_body">Answer correctly, and you could be in the draw to win this week’s prize:</p>
+								<img class="trivia_img" src="/assets/img/uploads/trivia-01.jpg" width="160" height="160" alt="Image description" />
+								<h6 class="trivia_prize h7">Double Pass Tickets to Coachella 2016</h6>
+								<button class="btn trivia_btn" ng-click="showForm = true">Enter to Win</button>
+							</div><!-- /.trivia_intro -->
+
+							<form id="trivia-question" name="triviaForm" class="trivia_question" ng-show="showForm"  ng-submit="submitTrivia()">
+								<fieldset class="question">
+									<legend class="question_lbl">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor?</legend>
+
+									<ul class="multiChoice question_choice">
+										<li>
+											<input type="radio" id="trivia-opt1" name="trivia_choice" ng-model="trivia.choice" class="multiChoice_opt" value="Hedgeway Neck" required />
+											<label for="trivia-opt1" class="multiChoice_lbl" ng-click="submit = true">A. Hedgeway Neck</label>
+										</li>
+										<li>
+											<input type="radio" id="trivia-opt2" name="trivia_choice" ng-model="trivia.choice" class="multiChoice_opt" value="Double Cutaway Design" required />
+											<label for="trivia-opt2" class="multiChoice_lbl" ng-click="submit = true">B. Double Cutaway Design</label>
+										</li>
+										<li>
+											<input type="radio" id="trivia-opt3" name="trivia_choice" ng-model="trivia.choice" class="multiChoice_opt" value="Slim Fretboard" required />
+											<label for="trivia-opt3" class="multiChoice_lbl" ng-click="submit = true">C. Slim Fretboard</label>
+										</li>
+										<li>
+											<input type="radio" id="trivia-opt4" name="trivia_choice" ng-model="trivia.choice" class="multiChoice_opt" value="Maple Wood Exterior" required />
+											<label for="trivia-opt4" class="multiChoice_lbl" ng-click="submit = true">D. Maple Wood Exterior</label>
+										</li>
+									</ul><!-- /.choices -->
+								</fieldset><!-- /.question -->
+
+								<button class="btn trivia_btn" type="submit" ng-disabled="triviaForm.$invalid">{{ submitText }}</button>
+							</form><!-- /.trivia_question -->
+
+							<div class="trivia_result" ng-show="results" ng-repeat="result in results">
+								<h6 class="trivia_hdg">{{ result.heading }}<i class="{{ result.status }}"></i></h6>
+
+								<p class="trivia_body">{{ result.msg }}</p>
+								<img class="trivia_img" src="{{ result.img }}" width="160" height="160" alt="Image description" />
+								<h6 class="trivia_prize h7">{{ result.nextPrize }}</h6>
+
+								<div class="trivia_meta" ng-show="result.prevWinner">
+									<span class="trivia_aux tertiary">Last Week’s Winner</span>
+									<strong class="trivia_name">{{ result.prevWinner }} </strong>
+								</div>
+							</div><!-- /.trivia_result -->
+						</div><!-- /.bg_copy -->
+					</aside><!-- /.trivia -->
+				</div><!-- /.secondary -->
+			</div><!-- /.latest_posts -->
+		</section><!-- /#latest -->
+
+		<section id="rewards" class="rewards">
+			<div class="wrapper wrapper-content">
+				<div class="rewards_head">
+					<span class="section-tag tertiary">Learn & Earn</span>
+					<h3 class="section-hdg">Featured Rewards</h3>
+					<a class="rewards_all pageLink tertiary" href="rewards.html">View All Rewards</a>
+				</div><!-- /.rewards_head -->
+
+				<div class="rewards_wrap">
+					<ul class="rewards_list grid grid-rewards">
+						<li class="reward grid_item">
+							<figure class="reward_img">
+								<img src="/assets/img/uploads/reward-01.jpg" width="280" height="280" alt="Image description" />
+								<span class="reward_cost tertiary"><strong>100</strong> IQ</span>
+							</figure><!-- /.reward_img -->
+
+							<h6 class="reward_title h7">Free Fender Merchandise Assortment Pack</h6>
+							<a class="btn reward_btn js-modal-btn" href="reward-detail.html">View Details & Claim</a>
+						</li>
+						<li class="reward grid_item">
+							<figure class="reward_img">
+								<img src="/assets/img/uploads/reward-02.jpg" width="280" height="280" alt="Image description" />
+								<span class="reward_cost tertiary"><strong>132</strong> IQ</span>
+							</figure><!-- /.reward_img -->
+
+							<h6 class="reward_title h7">Enter To Win Double Passes To Namm 2016</h6>
+							<a class="btn btn-blank reward_btn" href="#">View Details</a>
+							<span class="reward_note tertiary"><i class="locked"></i>Earn More IQ</span>
+						</li>
+						<li class="reward grid_item">
+							<figure class="reward_img">
+								<img src="/assets/img/uploads/reward-03.jpg" width="280" height="280" alt="Image description" />
+								<span class="reward_cost tertiary"><strong>185</strong> IQ</span>
+							</figure><!-- /.reward_img -->
+
+							<h6 class="reward_title h7">Exclusive Fender Custom Factory Tour</h6>
+							<a class="btn btn-blank reward_btn" href="#">View Details</a>
+							<span class="reward_note tertiary"><i class="locked"></i>Earn More IQ</span>
+						</li>
+						<li class="reward grid_item">
+							<figure class="reward_img">
+								<img src="/assets/img/uploads/reward-04.jpg" width="280" height="280" alt="Image description" />
+								<span class="reward_cost tertiary"><strong>200</strong> IQ</span>
+							</figure><!-- /.reward_img -->
+
+							<h6 class="reward_title h7">Meet The Queen Of Tone, Abby Ybarra</h6>
+							<a class="btn btn-blank reward_btn" href="#">View Details</a>
+							<span class="reward_note tertiary"><i class="locked"></i>Earn More IQ</span>
+						</li>
+						<li class="reward grid_item">
+							<figure class="reward_img">
+								<img src="/assets/img/uploads/reward-01.jpg" width="280" height="280" alt="Image description" />
+								<span class="reward_cost tertiary"><strong>210</strong> IQ</span>
+							</figure><!-- /.reward_img -->
+
+							<h6 class="reward_title h7">Free Fender Merchandise Assortment Pack</h6>
+							<a class="btn btn-blank reward_btn" href="#">View Details</a>
+							<span class="reward_note tertiary"><i class="locked"></i>Earn More IQ</span>
+						</li>
+						<li class="reward grid_item">
+							<figure class="reward_img">
+								<img src="/assets/img/uploads/reward-02.jpg" width="280" height="280" alt="Image description" />
+								<span class="reward_cost tertiary"><strong>250</strong> IQ</span>
+							</figure><!-- /.reward_img -->
+
+							<h6 class="reward_title h7">Enter To Win Double Passes To Namm 2016</h6>
+							<a class="btn btn-blank reward_btn" href="#">View Details</a>
+							<span class="reward_note tertiary"><i class="locked"></i>Earn More IQ</span>
+						</li>
+						<li class="reward grid_item">
+							<figure class="reward_img">
+								<img src="/assets/img/uploads/reward-03.jpg" width="280" height="280" alt="Image description" />
+								<span class="reward_cost tertiary"><strong>275</strong> IQ</span>
+							</figure><!-- /.reward_img -->
+
+							<h6 class="reward_title h7">Exclusive Fender Custom Factory Tour</h6>
+							<a class="btn btn-blank reward_btn" href="#">View Details</a>
+							<span class="reward_note tertiary"><i class="locked"></i>Earn More IQ</span>
+						</li>
+						<li class="reward grid_item">
+							<figure class="reward_img">
+								<img src="/assets/img/uploads/reward-04.jpg" width="280" height="280" alt="Image description" />
+								<span class="reward_cost tertiary"><strong>300</strong> IQ</span>
+							</figure><!-- /.reward_img -->
+
+							<h6 class="reward_title h7">Meet The Queen Of Tone, Abby Ybarra</h6>
+							<a class="btn btn-blank reward_btn" href="#">View Details</a>
+							<span class="reward_note tertiary"><i class="locked"></i>Earn More IQ</span>
+						</li>
+					</ul><!-- /.rewards_list -->
+
+					<button class="rewards_btn rewards_prev"><span class="rewards_icn"><span class="meta">Previous</span></span></button>
+					<button class="rewards_btn rewards_next"><span class="rewards_icn"><span class="meta">Next</span></span></button>					
+				</div><!-- /.rewards_wrap -->
+			</div><!-- /.wrapper -->
+		</section><!-- /#rewards -->
+	</div><!-- /.page -->
+			</section><!-- /#main -->
+
+			<footer id="page-foot" class="foot">
+	<div class="foot_wrapper">
+		<a class="brand brand-foot" href="/">
+			<img class="brand_img" src="/assets/img/global/logo.png" width="154" alt="The Fender Academy logo" />
+		</a><!-- /.brand -->
+
+		<nav class="nav nav-foot">
+			<h2 class="meta">Additional Navigation</h2>
+
+			<ul class="nav_list">
+				<li><a href="#">About Fender</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#">Terms & Conditions</a></li>
+			</ul>
+
+			<small class="copyright">Copyright © 2016 Fender Musical Instruments Corporation. All rights reserved.</small>
+		</nav><!-- /.nav -->
+
+		<a class="btn btn-alt btn-top foot_top" href="#page-head">Top</a>
+	</div><!-- /.foot_wrapper -->
+</footer><!-- /#page-foot -->
+			<!-- Site Scripts -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/lib/jquery.min.js"><\/script>')</script>
+<script type="text/javascript" src="/assets/js/plugins.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.min.js"></script>
+
+<!-- App Scripts -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.min.js"></script>
+<script type="text/javascript" src="/assets/js/app/controllers/triviaController.js"></script>		</div><!-- /.viewport -->
+
+	</body>
+</html>

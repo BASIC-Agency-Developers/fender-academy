@@ -1,0 +1,352 @@
+/*-------------------------------------------
+  General
+-------------------------------------------*/
+body {
+	background: $white;
+	color: $text;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+	font-family: $sans-serif;
+	letter-spacing: .01em;
+}
+
+// Main Page
+#main {
+	padding-top: em(70);
+
+	@include max-down($tablet) {
+		padding-top: em(60);
+	}
+}
+
+// Wrapper
+.wrapper {
+	margin: 0 auto;
+	padding: 0 $gutter-px;
+
+	&:after {
+		clear: both;
+		content: '';
+		display: block;
+		height: 0;
+		visibility: hidden;
+	}
+}
+.wrapper-content {
+	max-width: em(1180 + $gutters);
+	position: relative;
+}
+
+/*-------------------------------------------
+  Flexbox
+-------------------------------------------*/
+%flex {
+	@include display(flex);
+}
+%justify {
+	@include justify-content(space-between);
+}
+%align-center {
+	@include align-self(center);
+}
+
+/*-------------------------------------------
+  Floats
+-------------------------------------------*/
+%align-left {
+	float: left;
+}
+%align-right {
+	float: right;
+}
+.primary {
+	@extend %align-left;
+}
+.secondary {
+	@extend %align-right;
+}
+
+/*-------------------------------------------
+  Sidebar
+-------------------------------------------*/
+.secondary_section {
+	padding: 0 40px;
+}
+.secondary_head {
+	border-bottom: 1px solid $grey-lt;
+	margin-bottom: em(40);
+	overflow: hidden;
+	padding: em(36) 0 em(22);
+}
+.secondary_hdg {
+	@extend %align-left;
+}
+.secondary_link {
+	margin-top: .357142857em; // 5px
+	@extend %align-right;
+}
+
+/*-------------------------------------------
+  Frequently Used Positions
+-------------------------------------------*/
+%top-left {
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+
+/*-------------------------------------------
+  Transforms
+-------------------------------------------*/
+%center-vert {
+	top: 50%;
+	@include transform(translateY(-50%));
+}
+%center-horiz {
+	left: 50%;
+	@include transform(translateX(-50%));
+}
+%center-both {
+	left: 50%;
+	top: 50%;
+	@include transform(translateX(-50%) translateY(-50%));
+}
+
+/*-------------------------------------------
+  Background Blocks
+-------------------------------------------*/
+.bg {
+	background-color: $grey-dk;
+	color: $white;
+	position: relative;
+}
+%cover-img {
+	height: auto;
+	left: 50%;
+	min-height: 100%;
+	min-width: 100%;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	@extend %center-both;
+}
+.bg_img {
+	background: center no-repeat;
+	background-size: cover;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	width: 100%;
+	@extend %top-left;
+
+	img {
+		@extend %cover-img;
+	}
+
+	&[style*="background-image"] {
+		img {
+			display: none;
+		}
+	}
+}
+.bg_copy {
+	position: relative;
+}
+
+// Overlays
+%cover,
+.cover {
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	text-indent: -999em;
+	top: 0;
+	width: 100%;
+}
+
+/*-------------------------------------------
+  Icons
+-------------------------------------------*/
+$sprite-svg: url(../img/global/sprite.svg);
+$sprite-png: url(../img/global/sprite.png);
+
+// Icon Elements
+.icon {
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	text-indent: -999em;
+	@extend %sprite;
+}
+
+// Psuedo Icons
+%icn {
+	background-repeat: no-repeat;
+	background-size: 100%;
+	content: '';
+	display: inline-block;
+	position: relative;
+}
+%icn-after {
+	&:after {
+		margin-left: 9px;
+		@extend %icn;
+	}
+}
+%icn-before {
+	&:before {
+		margin-right: 9px;
+		@extend %icn;
+	}
+}
+%sprite {
+	background: $sprite-svg 0 0 no-repeat;
+
+	.no-svg & {
+		background-image: $sprite-png;
+	}
+}
+.locked {
+	@extend %icn-before;
+
+	&:before {
+		background-position: -22px 0;
+		height: 12px;
+		top: 1px;
+		width: 9px;
+		@extend %sprite;
+	}
+}
+
+/*-------------------------------------------
+  Links
+-------------------------------------------*/
+a {
+	color: $accent;
+
+	&:hover {
+		color: $accent-alt;
+	}
+}
+
+// Page Links
+.pageLink {
+	font-size: rem(11);
+	font-weight: 700;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+
+	&:after {
+		content: 'r';
+		font-size: 10px;
+		margin-left: 8px;
+		position: relative;
+		top: 1px;
+		@extend %icn-fnt;
+	}
+
+	&.tertiary {
+		font-size: rem(14);
+		font-weight: normal;
+
+		&:after {
+			top: 0;
+		}
+	}
+}
+
+// Video Links
+.vidLink {
+	font-family: $display;
+	@extend %h6; // font-size: 16px
+	letter-spacing: .07em;
+	text-transform: uppercase;
+
+	.bg & {
+		color: $white;
+	}
+}
+.vidLink_icn {
+	border: 2px solid $white;
+	border-radius: 50%;
+	display: inline-block;
+	font-size: 18px;
+	height: 48px;
+	line-height: 44px;
+	margin-right: 20px;
+	position: relative;
+	text-align: center;
+	text-indent: 4px;
+	width: 48px;
+	@extend %icn-fnt;
+	@extend %icn-before;
+
+	&:before {
+		background-position: 0 -80px;
+		display: block;
+		height: 42px;
+		left: 10px;
+		position: absolute;
+		top: 1px;
+		width: 42px;
+		@extend %sprite;
+	}
+}
+
+// Title Links
+.titleLink {
+	color: inherit;
+}
+
+/*-------------------------------------------
+  Tags
+-------------------------------------------*/
+.pill {
+	border-radius: 4px;
+	display: inline-block;
+	font-size: rem(10);
+		-webkit-font-smoothing: subpixel-antialiased;
+		-moz-osx-font-smoothing: auto;
+	font-weight: 800;
+	line-height: 1.1em;
+	padding: 5px 10px 4px;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+/*-------------------------------------------
+  Small Screen Styles
+-------------------------------------------*/
+@include max-down($tablet) {
+	/*-------------------------------------------
+	  Sidebar
+	-------------------------------------------*/
+	.secondary_section {
+		padding: 0 20px;
+	}
+	.secondary_head {
+		margin-bottom: em(30);
+		padding: em(16) 0 em(15);
+	}
+
+	/*-------------------------------------------
+	  Links
+	-------------------------------------------*/
+	// Video Links
+	.vidLink_icn {
+		border-width: 1px;
+		font-size: 12px;
+		height: 32px;
+		line-height: 28px;
+		margin-right: 14px;
+		width: 32px;
+
+		&:before {
+			left: 0;
+			top: -6px;
+			@include transform(scale(.64));
+		}
+	}
+}

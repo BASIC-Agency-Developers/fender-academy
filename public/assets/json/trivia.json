@@ -1,0 +1,12 @@
+{
+	"results": [
+		{
+			"status": "success",
+			"heading": "Success!",
+			"msg": "You are now entered in the draw! Winners will be announced 11/23/15.",
+			"img": "/assets/img/uploads/trivia-02.jpg",
+			"nextPrize": "Next Week’s Prize: Fender Gig Bag Kit",
+			"prevWinner": "James, F."
+		}
+	]
+}

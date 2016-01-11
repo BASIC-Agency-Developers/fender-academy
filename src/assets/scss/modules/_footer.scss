@@ -1,0 +1,141 @@
+/*-------------------------------------------
+  Footer
+-------------------------------------------*/
+.foot {
+	background: $grey-dk;
+}
+.foot_wrapper {
+	margin: 0 auto;
+	max-width: em(1250);
+	padding: 53px 20px 37px;
+	position: relative;
+}
+
+/*-------------------------------------------
+  Branding
+-------------------------------------------*/
+.brand-foot {
+	display: block;
+	left: 20px;
+	position: absolute;
+	top: 50px;
+	width: 154px;
+
+	img {
+		height: auto;
+		width: 100%;
+	}
+}
+
+/*-------------------------------------------
+  Footer Navigation
+-------------------------------------------*/
+.nav-foot {
+	font-family: $display;
+		-webkit-font-smoothing: subpixel-antialiased;
+		-moz-osx-font-smoothing: auto;
+	font-weight: normal;
+	text-align: center;
+
+	.nav_list {
+		@extend %h6; // font-size: 16px
+		margin-bottom: em(47);
+
+		> li {
+			+ li {
+				margin-left: em(60);
+			}
+		}
+	}
+	a {
+		color: $white;
+	}
+}
+
+// Copyright
+.copyright {
+	color: $text-lt;
+	font: bold rem(10) $sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+}
+
+/*-------------------------------------------
+  Back to Top Button
+-------------------------------------------*/
+.foot_top {
+	position: absolute;
+	right: 20px;
+	top: 46px;
+}
+
+/*-------------------------------------------
+  Small Screen Styles
+-------------------------------------------*/
+@include max-down($desktop) {
+	/*-------------------------------------------
+	  Branding
+	-------------------------------------------*/
+	.brand-foot {
+		width: 130px;
+	}
+
+	/*-------------------------------------------
+	  Footer Navigation
+	-------------------------------------------*/
+	.nav-foot {
+		.nav_list {
+			> li {
+				+ li {
+					margin-left: em(20);
+				}
+			}
+		}
+	}
+}
+@include max-down($tablet) {
+	/*-------------------------------------------
+	  Footer
+	-------------------------------------------*/
+	.foot_wrapper {
+		padding-top: 30px;
+	}
+	/*-------------------------------------------
+	  Branding
+	-------------------------------------------*/
+	.brand-foot {
+		margin: 0 auto 24px;
+		position: static;
+		width: 154px;
+	}
+
+	/*-------------------------------------------
+	  Footer Navigation
+	-------------------------------------------*/
+	.nav-foot {
+		border-top: 1px solid lighten($grey-dk, 10%);
+		display: block;
+		padding-top: 24px;
+
+		.nav_list {
+			font-size: rem(18);
+			line-height: 2.611111111em; // 47px
+			margin-bottom: 16px;
+
+			li {
+				display: block;
+
+				+ li {
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	/*-------------------------------------------
+	  Back to Top Button
+	-------------------------------------------*/
+	.btn.foot_top {
+		display: none;
+	}
+}
