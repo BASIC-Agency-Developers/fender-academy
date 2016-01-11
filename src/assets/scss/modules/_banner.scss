@@ -59,6 +59,39 @@
 		@extend %cover;
 	}
 }
+.banner_back {
+	background: none;
+	border: 2px solid transparentize($text-lt, .5);
+	border-radius: 50%;
+	height: 39px;
+	left: 40px;
+	position: absolute;
+	top: em(110);
+	width: 39px;
+	z-index: 1;
+
+	&:hover {
+		border: 2px solid transparentize($text-lt, .25);
+
+		.banner_back_icn {
+			color: $accent;
+		}
+	}
+}
+.banner_back_icn {
+	color: $text-xlt;
+	display: inline-block;
+	overflow: hidden;
+
+	&:before {
+		content: 'l';
+		display: inline-block;
+		font-size: 10px;
+		position: absolute;
+		@extend %center-both;
+		@extend %icn-fnt;
+	}
+}
 
 /*-------------------------------------------
   Dashboard
@@ -173,6 +206,9 @@
 	.banner {
 		margin-top: em(-60);
 		padding-top: em(60);
+	}
+	.banner_back {
+		display: none;
 	}
 
 	/*-------------------------------------------
