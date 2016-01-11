@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>Chapter</title>
+
+		<link rel="stylesheet" type="text/css" href="/assets/css/screen.css" media="screen" />
+
+		<link href="/assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script type="text/javascript" src="/assets/js/lib/modernizr.min.js"></script>
+
+		<!--[if (gte IE 6)&(lte IE 8)]>
+			<script type="text/javascript" src="/assets/js/lib/selectivizr.min.js"></script>
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<script type="text/javascript" src="/assets/js/lib/respond.min.js"></script>
+		<![endif]-->
+
+		<!-- Typekit -->
+		<script>
+			(function(d) {
+				var config = {
+					kitId: 'oos5bna',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+			})(document);
+		</script>
+	</head>
+
+	<body id="chapter" data-page="chapter" ng-app="FenderAcademy">
+
+		<div class="viewport">
+			<header id="page-head" class="head">
+	<a class="nav-btn nav-btn-menu" href="#main-nav">Main Navigation</a>
+	<a class="nav-btn nav-btn-user" href="#user-nav">User Navigation</a>
+	<a class="nav-btn nav-btn-close" href="#main">Skip Navigation</a>
+
+	<a class="brand brand-head" href="/">
+		<h1 class="meta">Fender Academy</h1>
+		<img class="brand_img" src="/assets/img/global/logo.png" width="142" alt="The Fender Academy logo" />
+	</a><!-- /.brand -->
+
+	<nav id="main-nav" class="nav nav-main nav-head">
+		<h2 class="meta">Primary Navigation</h2>
+
+		<ul class="nav_list">
+			<li class="dropdown">
+				<a class="nav_item dropdown_btn page-btn" href="learn.html">Learn</a>
+
+				<ul class="dropdown_list">
+					<li><a href="chapter.html">Fender Fundamentals</a></li>
+					<li><a href="chapter.html">Electric Guitar</a></li>
+					<li><a href="chapter.html">Bass Guitar</a></li>
+					<li><a href="chapter.html">Amplifiers</a></li>
+					<li><a href="chapter.html">Acoustics</a></li>
+					<li><a href="chapter.html">Folk & Bluegrass</a></li>
+					<li><a href="chapter.html">Limited Edition</a></li>
+					<li><a href="#">+ See All</a></li>
+				</ul><!-- /.dropdown_list -->
+			</li>
+			<li class="dropdown">
+				<a class="nav_item dropdown_btn page-btn" href="latest.html">Latest</a>
+
+				<ul class="dropdown_list">
+					<li><a href="latest-category.html">Video</a></li>
+					<li><a href="latest-category.html">Products</a></li>
+					<li><a href="latest-category.html">Events</a></li>
+					<li><a href="latest-category.html">Spotlight</a></li>
+					<li><a href="latest-category.html">Rewards</a></li>
+					<li><a href="latest-archive.html">Archive</a></li>
+				</ul><!-- /.dropdown_list -->
+			</li>
+			<li class="dropdown">
+				<a class="nav_item dropdown_btn page-btn" href="resources.html">Resources</a>
+
+				<ul class="dropdown_list">
+					<li><a href="resources-calendar.html">Calendar</a></li>
+					<li><a href="resources-events.html">Events</a></li>
+				</ul><!-- /.dropdown_list -->
+			</li>
+			<li class="nonDropdown"><a class="nav_item page-btn" href="learn.html">Support</a></li>
+		</ul>
+	</nav><!-- /.mainNav -->
+
+	<nav id="user-nav" class="nav nav-user nav-head">
+		<h2 class="meta">User Navigation</h2>
+
+		<div class="dropdown nav_module nav_avatar">
+		
+			<!-- .avatar element can have classes gold, silver, or bronze to show different pick outlines -->
+			<figure class="avatar">
+				<img class="avatar_img" src="/assets/img/uploads/user-lg-01.jpg" width="32" height="32" alt="My avatar" />
+			</figure>
+
+			<span class="nav_item dropdown_btn"><span class="nav_uname">Adam</span></span>
+
+			<ul class="dropdown_list">
+				<li><a href="dashboard.html">Dashboard</a></li>
+				<li><a href="account.html">My Account</a></li>
+				<li><a href="#">Log Out</a></li>
+			</ul>
+		</div><!-- /.nav_avatar -->
+
+		<div class="nav_module nav_iq">
+			<div class="iq" data-pct="60">
+				<strong class="nav_iq_title iq_title">My Fender IQ</strong>
+
+				<div class="canvIq iq_img" data-iq="110" data-goal="200" data-size="35" data-dots="no">
+					<span class="iq_lbl tertiary">102</span>
+				</div>
+			</div><!-- /.iq -->
+		</div><!-- /.nav_iq -->
+	</nav><!-- /.userNav -->
+</header><!-- /#page-head -->
+			<section id="main" role="main">
+					<div class="banner bg">
+		<figure class="banner_bg bg_img">
+			<img src="/assets/img/uploads/banner-03.jpg" alt="Image description" />
+		</figure>
+
+		<div class="banner_wrapper wrapper">
+			<div class="banner_copy">
+				<span class="banner_tag tertiary">Chapter 02</span>
+				<h3 class="banner_title">Electric Guitars</h3>
+			</div><!-- /.banner_copy -->
+
+			<a class="banner_back" href="learn.html"><span class="banner_back_icn"><span class="meta">Back to the Learn section</span></span></a>
+		</div><!-- /.banner_wrapper -->
+	</div><!-- /.banner -->
+
+	<div class="page chapter">
+		<div class="intro chapter_intro">
+			<div class="lms_wrapper wrapper">
+				<div class="intro_head">
+					<span class="intro_callout intro_callout-alt tertiary">Ready to test?</span>
+					<span class="intro_callout tertiary">Think you're ready for the Electric Guitar test?</span>
+					<a class="intro_btn btn js-modal-btn" href="test.html">Take Chapter Test</a>
+				</div><!-- /.intro_head -->
+
+				<div class="intro_copy copy">
+					<h4 class="intro_hdg">About Electric Guitars</h4>
+
+					<div class="intro_body mod_body">
+						<p>If you’ve never built a website before and you have no coding or design experience, this is the place to start. In this project, we learn how to build a modern portfolio website for desktops, tablets, and mobile devices. We start with basic HTML and CSS syntax. Next, we learn how to build custom web pages with an image gallery and contact page. Finally, we walk through how to share a website live on the web. <strong><em>PLO 70-80 words max.</em></strong></p>
+					</div><!-- /.intro_body -->
+				</div><!-- /.intro_copy -->
+
+				<div class="intro_stats stats">
+					<h6 class="stats_hdg h8">What You’ll Learn</h6>
+
+					<ul class="stats_list mod_body">
+						<li>How to write basic HTML</li>
+						<li>How to style web pages with CSS</li>
+						<li>Learn about the Stratocaster history, features word</li>
+						<li>How to purchase a domain and hosting</li>
+						<li>Max number of points: 5, character count: 50</li>
+					</ul>
+				</div><!-- /.intro_stats -->
+
+				<div class="intro_meta tertiary">
+					<span class="card_lvl mod_lvl">Basic</span>
+					<span class="card_time mod_time">45 Mins</span>
+				</div><!-- /.card_meta -->
+			</div><!-- /.lms_wrapper -->
+		</div><!-- /. intro -->
+
+		<div id="learn" class="lms">
+			<div class="lms_wrapper wrapper">
+				<ol class="lessons">
+					<li>
+						<article class="lesson card card-lesson">
+							<div class="lesson_title">
+								<h6 class="lesson_hdg">Why Fender</h6>
+							</div><!-- /.lesson_title -->
+
+							<div class="lesson_description mod_body">
+								<p>Learn about the Stratocaster history, features, sound and style, and what makes then unique dolor sit amet minium.</p>
+							</div><!-- /.lesson_description -->
+
+							<span class="lesson_status card_time mod_time tertiary">Viewed</span>
+
+							<span class="lesson_go goLink"><span class="goLink_icn"><span class="meta">More Information</span></span></span>
+
+							<a class="cover" href="lesson.html">View Lesson</a>
+						</article><!-- /.lesson -->
+					</li>
+					<li>
+						<article class="lesson card card-lesson">
+							<div class="lesson_title">
+								<h6 class="lesson_hdg">Electric Guitar Anatomy</h6>
+							</div><!-- /.lesson_title -->
+
+							<div class="lesson_description mod_body">
+								<p>Learn about the Stratocaster history, features, sound and style, and what makes then unique dolor sit amet minium.</p>
+							</div><!-- /.lesson_description -->
+
+							<span class="lesson_status card_time mod_time tertiary">Viewed</span>
+
+							<span class="lesson_go goLink"><span class="goLink_icn"><span class="meta">More Information</span></span></span>
+
+							<a class="cover" href="lesson.html">View Lesson</a>
+						</article><!-- /.lesson -->
+					</li>
+					<li>
+						<article class="lesson card card-lesson">
+							<div class="lesson_title">
+								<h6 class="lesson_hdg">Series</h6>
+								<span class="card_note pill">Updated</span>
+							</div><!-- /.lesson_title -->
+
+							<div class="lesson_description mod_body">
+								<p>Learn about the Stratocaster history, features, sound and style, and what makes then unique dolor sit amet minium.</p>
+							</div><!-- /.lesson_description -->
+
+							<span class="lesson_status card_time mod_time tertiary">Viewed</span>
+
+							<span class="lesson_go goLink"><span class="goLink_icn"><span class="meta">More Information</span></span></span>
+
+							<a class="cover" href="lesson.html">View Lesson</a>
+						</article><!-- /.lesson -->
+					</li>
+					<li>
+						<article class="lesson card card-lesson">
+							<div class="lesson_title">
+								<h6 class="lesson_hdg">Telecaster</h6>
+							</div><!-- /.lesson_title -->
+
+							<div class="lesson_description mod_body">
+								<p>Learn about the Stratocaster history, features, sound and style, and what makes then unique dolor sit amet minium.</p>
+							</div><!-- /.lesson_description -->
+
+							<span class="lesson_status card_time mod_time tertiary">Viewed</span>
+
+							<span class="lesson_go goLink"><span class="goLink_icn"><span class="meta">More Information</span></span></span>
+
+							<a class="cover" href="lesson.html">View Lesson</a>
+						</article><!-- /.lesson -->
+					</li>
+					<li>
+						<article class="lesson card card-lesson">
+							<div class="lesson_title">
+								<h6 class="lesson_hdg">Stratocaster</h6>
+							</div><!-- /.lesson_title -->
+
+							<div class="lesson_description mod_body">
+								<p>Learn about the Stratocaster history, features, sound and style, and what makes then unique dolor sit amet minium.</p>
+							</div><!-- /.lesson_description -->
+
+							<span class="lesson_status card_time mod_time tertiary">Viewed</span>
+
+							<span class="lesson_go goLink"><span class="goLink_icn"><span class="meta">More Information</span></span></span>
+
+							<a class="cover" href="lesson.html">View Lesson</a>
+						</article><!-- /.lesson -->
+					</li>
+					<li>
+						<article class="lesson card card-lesson">
+							<div class="lesson_title">
+								<h6 class="lesson_hdg">Jaguar</h6>
+							</div><!-- /.lesson_title -->
+
+							<div class="lesson_description mod_body">
+								<p>Learn about the Stratocaster history, features, sound and style, and what makes then unique dolor sit amet minium.</p>
+							</div><!-- /.lesson_description -->
+
+							<span class="lesson_status card_time mod_time tertiary">Viewed</span>
+
+							<span class="lesson_go goLink"><span class="goLink_icn"><span class="meta">More Information</span></span></span>
+
+							<a class="cover" href="lesson.html">View Lesson</a>
+						</article><!-- /.lesson -->
+					</li>
+					<li>
+						<article class="lesson card card-lesson">
+							<div class="lesson_title">
+								<h6 class="lesson_hdg">Jazzmaster</h6>
+								<span class="card_note pill">Updated</span>
+							</div><!-- /.lesson_title -->
+
+							<div class="lesson_description mod_body">
+								<p>Learn about the Stratocaster history, features, sound and style, and what makes then unique dolor sit amet minium.</p>
+							</div><!-- /.lesson_description -->
+
+							<span class="lesson_status card_time mod_time tertiary">Viewed</span>
+
+							<span class="lesson_go goLink"><span class="goLink_icn"><span class="meta">More Information</span></span></span>
+
+							<a class="cover" href="lesson.html">View Lesson</a>
+						</article><!-- /.lesson -->
+					</li>
+					<li>
+						<article class="lesson card card-lesson">
+							<div class="lesson_title">
+								<h6 class="lesson_hdg">Mustang</h6>
+							</div><!-- /.lesson_title -->
+
+							<div class="lesson_description mod_body">
+								<p>Learn about the Stratocaster history, features, sound and style, and what makes then unique dolor sit amet minium.</p>
+							</div><!-- /.lesson_description -->
+
+							<span class="lesson_status card_time mod_time tertiary">Viewed</span>
+
+							<span class="lesson_go goLink"><span class="goLink_icn"><span class="meta">More Information</span></span></span>
+
+							<a class="cover" href="lesson.html">View Lesson</a>
+						</article><!-- /.lesson -->
+					</li>
+				</ol><!-- /.chapters -->
+
+				<aside class="callout bg">
+					<figure class="callout_bg bg_img">
+						<img src="/assets/img/uploads/callout-02.jpg" alt="Image description" />
+					</figure>
+
+					<div class="bg_copy">
+						<h5 class="callout_txt">Ready to take the test on Electric Guitars?</h5>
+						<p class="callout_body">Test now to earn IQ and become Fender Certified!</p>
+						<a class="btn btn-solo js-modal-btn" href="test.html">Take Chapter Test</a>
+					</div>
+				</aside><!-- /.callout -->
+			</div><!-- /.lms_wrapper -->
+		</div><!-- /#learn -->
+	</div><!-- /.page -->
+			</section><!-- /#main -->
+
+			<footer id="page-foot" class="foot">
+	<div class="foot_wrapper">
+		<a class="brand brand-foot" href="/">
+			<img class="brand_img" src="/assets/img/global/logo.png" width="154" alt="The Fender Academy logo" />
+		</a><!-- /.brand -->
+
+		<nav class="nav nav-foot">
+			<h2 class="meta">Additional Navigation</h2>
+
+			<ul class="nav_list">
+				<li><a href="#">About Fender</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#">Terms & Conditions</a></li>
+			</ul>
+
+			<small class="copyright">Copyright © 2016 Fender Musical Instruments Corporation. All rights reserved.</small>
+		</nav><!-- /.nav -->
+
+		<a class="btn btn-alt btn-top foot_top" href="#page-head">Top</a>
+	</div><!-- /.foot_wrapper -->
+</footer><!-- /#page-foot -->
+			<!-- Site Scripts -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/lib/jquery.min.js"><\/script>')</script>
+<script type="text/javascript" src="/assets/js/plugins.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.min.js"></script>
+
+<!-- App Scripts -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.min.js"></script>
+<script type="text/javascript" src="/assets/js/app/controllers/triviaController.js"></script>		</div><!-- /.viewport -->
+
+	</body>
+</html>

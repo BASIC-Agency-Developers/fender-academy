@@ -130,10 +130,69 @@
 	}
 }
 
+// Lesson Cards
+.card-lesson {
+	margin-bottom: 20px;
+	padding: 45px 120px 46px 40px;
+	position: relative;
+
+	&:hover {
+		.lesson_go {
+			.goLink_icn {
+				color: $accent-alt;
+			}
+		}
+	}
+
+	.card_note {
+		margin-left: 0;
+	}
+}
+.lesson_title,
+.lesson_description,
+.lesson_status,
+.lesson_go {
+	display: inline-block;
+	vertical-align: middle;
+}
+.lesson_title,
+.lesson_description {
+	padding-right: 20px;
+}
+.lesson_title {
+	width: 26.6666667%; // 240px
+}
+.lesson_description {
+	margin-right: 6.6666667%; // 60px
+	width: 46.6666667%; // 420px
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+.lesson_hdg {
+	display: inline-block;
+	margin-right: 1em;
+	vertical-align: text-bottom;
+}
+.lesson_go {
+	position: absolute;
+	right: 40px;
+	@extend %center-vert;
+
+	.goLink_icn {
+		color: $accent;
+		line-height: 1em;
+	}
+}
+
 /*-------------------------------------------
   Small Screen Styles
 -------------------------------------------*/
 @include max-down($tablet) {
+	/*-------------------------------------------
+	  Learn Cards
+	-------------------------------------------*/
 	.card_copy {
 		padding: 25px 20px 20px;
 	}
@@ -152,5 +211,29 @@
 	}
 	.card_status {
 		font-size: rem(13);
+	}
+
+	// Lesson Cards
+	.card-lesson {
+		padding: 26px 20px 23px;
+	}
+	.lesson_title,
+	.lesson_description,
+	.lesson_status {
+		display: block;
+		width: 100%;
+	}
+	.lesson_hdg {
+		margin-bottom: .642857143em; // 7px
+		vertical-align: top;
+	}
+	.lesson_description {
+		margin-bottom: 2.357142857em; // 33px
+	}
+	.lesson_go {
+		bottom: 20px;
+		right: 20px;
+		top: auto;
+		@include transform(none);
 	}
 }

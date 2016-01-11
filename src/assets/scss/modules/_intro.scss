@@ -1,0 +1,108 @@
+/*-------------------------------------------
+  Intro
+-------------------------------------------*/
+.intro {
+	padding: em(40) 0 em(80);
+}
+.intro_head {
+	border-bottom: 1px solid $grey-lt;
+	margin-bottom: em(72);
+	overflow: hidden;
+	padding-bottom: 17px;
+	@extend %flex;
+	@extend %justify;
+}
+.intro_callout,
+.intro_btn {
+	@extend %align-center;
+}
+.intro_callout-alt {
+	display: none;
+}
+.intro_callout {
+	margin-top: 4px;
+}
+.intro_copy {
+	border-right: 1px solid $grey-lt;
+	padding-right: 60px;
+	width: 60.3773585%; // 640px
+	@extend %align-left;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+.intro_hdg {
+	margin: -.32em 0 .28em;
+}
+.intro_stats {
+	border-left: 1px solid $grey-lt;
+	left: -1px;
+	padding: 5px 0 5px 61px;
+	position: relative;
+	width: 39.6226415%; // 420px
+	@extend %align-right;
+}
+.stats_hdg {
+	color: $text-lt;
+	margin-bottom: 1.5em; // 18px
+	text-transform: uppercase;
+}
+.stats_list {
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	li {
+		padding-left: 20px;
+		position: relative;
+
+		&:before {
+			color: $grey;
+			content: 'c';
+			font-size: 8px;
+			top: .25em; // 2px
+			@extend %top-left;
+			@extend %icn-fnt;
+		}
+	}
+}
+.intro_meta {
+	clear: both;
+	padding-top: em(38);
+}
+
+/*-------------------------------------------
+  Small Screen Styles
+-------------------------------------------*/
+@include max-down($tablet) {
+	/*-------------------------------------------
+	  Intro
+	-------------------------------------------*/
+	.intro {
+		padding: em(20) 0 em(37);
+	}
+	.intro_head {
+		margin-bottom: em(40);
+	}
+	.intro_callout-alt {
+		display: block;
+
+		+ .intro_callout {
+			display: none;
+		}
+	}
+	.intro_copy,
+	.intro_stats {
+		border: none;
+		float: none;
+		padding: 0;
+		width: 100%;
+	}	
+	.intro_copy {
+		margin-bottom: em(30);
+	}
+	.intro_stats {
+		margin-bottom: em(8);
+	}
+}

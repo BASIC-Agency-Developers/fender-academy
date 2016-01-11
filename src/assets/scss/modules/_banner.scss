@@ -204,8 +204,10 @@
 	  Banner
 	-------------------------------------------*/
 	.banner {
-		margin-top: em(-60);
-		padding-top: em(60);
+		&:first-child {
+			margin-top: em(-60);
+			padding-top: em(60);
+		}
 	}
 	.banner_back {
 		display: none;

@@ -300,6 +300,39 @@ a {
 	color: inherit;
 }
 
+// Next/Go Link
+.goLink {
+	background: none;
+	border: 2px solid $grey-lt;
+	border-radius: 50%;
+	display: inline-block;
+	position: relative;
+	height: 39px;
+	width: 39px;
+
+	&:hover {
+		border-color: darken($grey-lt, 5%);
+
+		.goLink_icn {
+			color: $accent;
+		}
+	}
+}
+.goLink_icn {
+	color: $text-xlt;
+	display: inline-block;
+	overflow: hidden;
+
+	&:before {
+		content: 'r';
+		display: inline-block;
+		font-size: 10px;
+		position: absolute;
+		@extend %center-both;
+		@extend %icn-fnt;
+	}
+}
+
 /*-------------------------------------------
   Tags
 -------------------------------------------*/

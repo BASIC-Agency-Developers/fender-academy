@@ -212,11 +212,10 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-notify');
-	grunt.loadNpmTasks('grunt-annotate');
+	// grunt.loadNpmTasks('grunt-annotate');
 
 	// 4. Where we tell Grunt what to do when we type 'grunt' into the terminal.
 	grunt.registerTask('default', [
-		'ngAnnotate',
 		'concat',
 		'sass',
 		'imagemin',
@@ -228,7 +227,6 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('build', [
 		'bower',
-		'ngAnnotate',
 		'concat',
 		'sass',
 		'imagemin',
