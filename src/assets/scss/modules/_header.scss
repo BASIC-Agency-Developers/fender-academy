@@ -332,9 +332,14 @@
 		&:hover {
 			.dropdown_btn {
 				background: none;
+				border-left-color: transparent;
+				border-right-color: transparent;
 
 				&:after {
 					content: 'd';
+				}
+				&:before {
+					display: none;
 				}
 			}
 			.dropdown_list {
@@ -472,5 +477,13 @@
 		&:before {
 			color: $accent;
 		}
+	}
+}
+@include max-down($mobile-lg) {
+	/*-------------------------------------------
+	  Navigation
+	-------------------------------------------*/
+	.nav_downloads {
+		display: none;
 	}
 }

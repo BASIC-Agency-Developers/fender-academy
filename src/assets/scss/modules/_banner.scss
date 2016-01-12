@@ -333,8 +333,11 @@
 	  Dashboard
 	-------------------------------------------*/
 	.banner-dashboard {
-		padding: em(30) 0 em(33);
 		text-align: center;
+
+		&:first-child {
+			padding: em(90) 0 em(33);
+		}
 
 		.banner_tag {
 			display: none;
