@@ -386,12 +386,12 @@
 	// User Navigation
 	.nav-user {
 		background: $grey-xdk;
-		padding: 26px 0 0;
+		padding: 30px 0 0;
 		text-align: center;
 
 		.avatar {
 			margin-bottom: 12px;
-			width: 84px;
+			width: 80px;
 
 			&:before {
 				background-image: url(../img/global/avatar-dk.png);
@@ -441,10 +441,12 @@
 			text-align: left;
 
 			li {
+				border-bottom: 1px solid darken($text-lt, 7%);
 				border-top: none;
 			}
 			a {
-				line-height: 4.571428571; // 64px
+				padding: 0 20px;
+				line-height: 5.571428571; // 78px
 			}
 		}
 	}
