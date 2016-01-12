@@ -96,7 +96,7 @@
 		i {
 			background-position: -22px -22px;
 			height: 12px;
-			margin-right: 3px;
+			margin-right: 1px;
 			top: 1px;
 			width: 12px;
 		}
@@ -189,6 +189,16 @@
 /*-------------------------------------------
   Small Screen Styles
 -------------------------------------------*/
+@include max-down($desktop-sm) {
+	/*-------------------------------------------
+	  Learn Cards
+	-------------------------------------------*/
+	.card_btn {
+		.count {
+			display: none;
+		}
+	}
+}
 @include max-down($tablet) {
 	/*-------------------------------------------
 	  Learn Cards

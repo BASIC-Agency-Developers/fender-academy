@@ -53,13 +53,16 @@
 	font-weight: 600;
 }
 .banner_bg {
+	background-attachment: fixed;
+
 	&:after {
 		background: transparentize($grey-dk, .3);
 		content: '';
 		@extend %cover;
 	}
 }
-.banner_back {
+.banner_back,
+.banner_scroll_icn {
 	background: none;
 	border: 2px solid transparentize($text-lt, .5);
 	border-radius: 50%;
@@ -91,6 +94,24 @@
 		@extend %center-both;
 		@extend %icn-fnt;
 	}
+}
+.banner_scroll {
+	color: $white;
+	display: block;
+
+	&:hover {
+		color: $accent;
+	}
+}
+.banner_scroll_icn {
+	color: $accent;
+	display: inline-block;
+	line-height: 39px;
+	margin-right: 9px;
+	text-align: center;
+	text-indent: 2px;
+	position: static;
+	@extend %icn-fnt;
 }
 
 /*-------------------------------------------
@@ -165,7 +186,7 @@
 	text-align: left;
 	
 	.banner_bg {
-			&:after {
+		&:after {
 			background: transparentize($grey-dk, .9);
 			content: '';
 			@extend %cover;
@@ -184,6 +205,101 @@
 	}
 	.banner_title {
 		margin-bottom: .6em; // 24px
+	}
+}
+
+/*-------------------------------------------
+  Lesson
+-------------------------------------------*/
+.banner-lesson {
+	padding: em(106) 0 em(75) $navWidth + em(86);
+
+	&:after {
+		display: none;
+	}
+
+	&:first-child {
+		padding-top: em(176);
+	}
+
+	.banner_bg {
+		&:after {
+			display: none;
+		}
+	}
+	&.overlay {
+		.banner_bg {
+			&:after {
+				background: transparentize($grey-dk, .15);
+				display: block;
+			}
+		}
+	}
+
+	.banner_wrapper {
+		height: auto;
+	}
+	.banner_copy {
+		max-width: em(500);
+		text-align: left;
+		top: 0;
+		@include transform(none);
+	}
+	.banner_tag {
+		display: block;
+		margin-bottom: .857142857em; // 12px
+	}
+	.banner_title {
+		margin-bottom: .4em; // 22px
+	}
+	.banner_body {
+		font-weight: 700;
+		margin-bottom: .857142857em; // 12px
+	}
+	.banner_stats {
+		margin-bottom: 2.428571429em; // 34px
+	}
+	.btn {
+		margin-bottom: 6.785714286em; // 95px
+
+		+ .btn {
+			margin-left: 1.142857143em; // 16px
+		}
+	}
+}
+.banner-lesson-alt {
+	padding-left: $navWidth;
+
+	.banner_copy {
+		margin: 0 auto;
+		text-align: center;
+	}
+	.banner_stats {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 28.571428571em; // 400px;
+	}
+	.banner_scroll {
+		padding-bottom: 60px;
+		position: relative;
+	}
+	.banner_scroll_icn {
+		bottom: 0;
+		position: absolute;
+		top: auto;
+		@extend %center-horiz;
+	}
+}
+.banner-lesson-alt2 {
+	padding-left: $navWidth;
+	padding-right: 80px;
+
+	.banner_bg {
+		background-position: right center;
+	}
+
+	.banner_copy {
+		@extend %align-right;
 	}
 }
 

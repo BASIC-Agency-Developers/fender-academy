@@ -1,5 +1,96 @@
 /*-------------------------------------------
-  Main Video
+  Playlists
+-------------------------------------------*/
+.playlist {
+	border-bottom: 1px solid $grey-lt;
+
+	> li {
+		border-top: 1px solid $grey-lt;
+		position: relative;
+	}
+}
+.playlist_title,
+.playlist_artist,
+.playlist_btn {
+	position: relative;
+	z-index: 3;
+}
+.playlist_title {
+	display: block;
+	font-weight: 800;
+	letter-spacing: -.01em;
+	margin-bottom: -.214285714em; // -3px
+	text-transform: uppercase;
+}
+.playlist_artist {
+	letter-spacing: .03em;
+}
+.playlist_btn {
+	border: 1px solid $grey-dk;
+	border-radius: 50%;
+	height: 27px;
+	width: 27px;
+	@extend %btn-reset;
+
+	&:before {
+		content: 'v';
+		@extend %icn-fnt;
+	}
+
+	&.pause {
+		border-color: $accent;
+		color: $accent;
+
+		&:before {
+			content: 's';
+			font-size: 10px;
+		}
+	}
+}
+
+// Audio Playlists
+.playlist_audio {
+	overflow: hidden;
+	padding: 23px 20px 23px 60px;
+
+	.audio {
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		width: 100%;
+	}
+	.playlist_btn {
+		left: 15px;
+		position: absolute;
+		@extend %center-vert;
+	}
+}
+
+/*-------------------------------------------
+  Audio
+-------------------------------------------*/
+.audio {
+	wave {
+		margin-top: -70px;
+		padding-top: 100px;
+	}
+	> wave {
+		canvas {
+			top: 70px!important;
+		}
+
+		wave {
+			background: $grey-xlt;
+
+			canvas {
+				margin-top: 40px;
+			}
+		}
+	}
+}
+
+/*-------------------------------------------
+  Videos
 -------------------------------------------*/
 .vid {
 	display: inline-block;
@@ -17,9 +108,7 @@
 	width: 100%;
 }
 
-/*-------------------------------------------
-  Video Controls
--------------------------------------------*/
+// Video Controls
 .vid_controls {
 	background: $grey-xxdk;
 	height: 50px;

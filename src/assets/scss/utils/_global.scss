@@ -256,6 +256,19 @@ a {
 		}
 	}
 }
+.pageLink-back {
+	&:before {
+		content: 'l';
+		font-size: 10px;
+		margin-right: 8px;
+		position: relative;
+		top: 1px;
+		@extend %icn-fnt;
+	}
+	&:after {
+		display: none;
+	}
+}
 
 // Video Links
 .vidLink {
@@ -331,6 +344,22 @@ a {
 		@extend %center-both;
 		@extend %icn-fnt;
 	}
+}
+
+// Download Links
+.downloadLink {
+
+}
+.downloadLink_icn {
+	height: 26px;
+	font-size: 10px;
+	font-style: normal;
+	line-height: 24px;
+	margin-right: 9px;
+	text-align: center;
+	text-indent: 1px;
+	width: 26px;
+	@extend %icn-fnt;
 }
 
 /*-------------------------------------------

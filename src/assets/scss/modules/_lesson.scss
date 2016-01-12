@@ -1,0 +1,234 @@
+/*-------------------------------------------
+  Lesson
+-------------------------------------------*/
+// Navigation
+.lesson_nav {
+	background: $grey-xdk;
+	border-right: 1px solid lighten($grey-dk, 10%);
+	color: $white;
+	left: 0;
+	overflow: scroll;
+	padding-top: em(70);
+	position: absolute;
+	text-transform: uppercase;
+	top: 0;
+	width: $navWidth;
+	z-index: 1;
+}
+.lesson_nav_head {
+	padding: 25px;
+
+	.pageLink {
+		display: inline-block;
+		font-size: rem(12);
+		margin-bottom: 2.083333333em;
+
+		&:before {
+			top: 0;
+		}
+	}
+}
+.lesson_nav_hdg {
+	font-weight: 800;
+}
+.lesson_list {
+	border-top: 1px solid lighten($grey-dk, 10%);
+	font-weight: 800;
+	letter-spacing: -.01em;
+	line-height: 1.5em;
+	padding: 16px 0;
+	@extend %h8;
+}
+.lesson_link {
+	color: $text-lt;
+	display: block;
+	padding: 10px 25px;
+	position: relative;
+
+
+	&.current,
+	&:hover {
+		color: $white;
+	}
+
+	&.complete {
+		padding-right: 50px;
+		@extend %icn-after;
+
+		&:after {
+			background-position: -22px -22px;
+			height: 12px;
+			position: absolute;
+			right: 20px;
+			width: 12px;
+			@extend %center-vert;
+			@extend %sprite;
+		}
+	}
+}
+
+// Sections
+.lesson_section {
+	height: 100vh;
+
+	&:not(.lesson_nav) {
+		position: relative;
+		white-space: nowrap;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			margin-right: -14px;
+			vertical-align: middle;
+			width: 10px;
+		}
+		.lesson_copy {
+			display: inline-block;
+			vertical-align: middle;
+			white-space: normal;
+			width: 100%;
+		}
+	}
+}
+
+/*-------------------------------------------
+  Modules
+-------------------------------------------*/
+.module {
+	position: relative;
+	text-align: center;
+}
+.module_bg,
+.module_img {
+	background-attachment: fixed;
+}
+.module_bg {
+	&:after {
+		background: transparentize($grey-dk, .3);
+		content: '';
+		@extend %cover;
+	}
+}
+.module_wrapper {
+	max-width: em(1140);
+	text-align: left;
+}
+.module_date,
+.module_tag {
+	color: $accent;
+	display: block;
+	font-family: $display;
+	text-transform: uppercase;
+}
+.module_date {
+	@extend %h4; // font-size: 25px
+	margin-bottom: .6em; // 15px
+}
+.module_tag {
+	@extend %h6; // font-size: 16px
+	margin-bottom: em(21);
+}
+.module_hdg {
+	margin-bottom: .6em; // 24px
+}
+.module_cta_hdg {
+	color: $text-xlt;
+	display: block;
+	@extend %h7; // font-size: 14px
+	margin-bottom: 1.285714286em; // 18px
+}
+.module_caption {
+	bottom: 40px;
+	color: $text-lt;
+	font-weight: 800;
+	position: absolute;
+	right: 40px;
+	text-transform: uppercase;
+	@extend %h8;
+}
+
+// Basic Module (text with background)
+.module-basic {
+	.module_copy {
+		max-width: em(460);
+	}
+	.module_body {
+		margin-bottom: em(54);
+	}
+
+	&.module-right {
+		background-position: right center;
+
+		.module_copy {
+			@extend %align-right;
+		}
+	}
+	&.module-center {
+		.module_copy {
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+}
+
+// Half Module (half image, half content)
+.module-half {
+	.module_img {
+		width: 50%;
+	}
+	.module_copy {
+		max-width: em(530);
+		padding-left: em(130);
+		@extend %align-right;
+	}
+	.module_body {
+		margin-bottom: em(34);
+	}
+	.module_caption {
+		color: transparentize($white, .5);
+	}
+
+	&.module-left {
+		.module_img {
+			left: 50%;
+		}
+		.module_copy {
+			padding-left: 0;
+			padding-right: em(130);
+			@extend %align-left;
+		}
+	}
+}
+
+// Gallery Module
+.module-gallery {
+	.module_wrapper {
+		max-width: em(1300);
+	}
+	.module_copy {
+		@extend %flex;
+		@extend %justify;
+	}
+	.module_img {
+		position: relative;
+
+		img {
+			display: block;
+			height: auto;
+			width: 100%;
+		}
+	}
+	.module_caption {
+		bottom: 20px;
+		right: 30px;
+	}
+
+	&.module-gallery-three {
+		.module_img {
+			+ .module_img {
+				border-left: 2px solid transparent;
+			}
+		}
+	}
+}

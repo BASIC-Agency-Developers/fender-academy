@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>Bassbreaker</title>
+
+		<link rel="stylesheet" type="text/css" href="/assets/css/screen.css" media="screen" />
+
+		<link href="/assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script type="text/javascript" src="/assets/js/lib/modernizr.min.js"></script>
+
+		<!--[if (gte IE 6)&(lte IE 8)]>
+			<script type="text/javascript" src="/assets/js/lib/selectivizr.min.js"></script>
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<script type="text/javascript" src="/assets/js/lib/respond.min.js"></script>
+		<![endif]-->
+
+		<!-- Typekit -->
+		<script>
+			(function(d) {
+				var config = {
+					kitId: 'oos5bna',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+			})(document);
+		</script>
+	</head>
+
+	<body id="lesson" data-page="lesson" ng-app="FenderAcademy">
+
+		<div class="viewport">
+			<header id="page-head" class="head">
+	<a class="nav-btn nav-btn-menu" href="#main-nav">Main Navigation</a>
+	<a class="nav-btn nav-btn-user" href="#user-nav">User Navigation</a>
+	<a class="nav-btn nav-btn-close" href="#main">Skip Navigation</a>
+
+	<a class="brand brand-head" href="/">
+		<h1 class="meta">Fender Academy</h1>
+		<img class="brand_img" src="/assets/img/global/logo.png" width="142" alt="The Fender Academy logo" />
+	</a><!-- /.brand -->
+
+	<nav id="main-nav" class="nav nav-main nav-head">
+		<h2 class="meta">Primary Navigation</h2>
+
+		<ul class="nav_list">
+			<li class="dropdown">
+				<a class="nav_item dropdown_btn page-btn" href="learn.html">Learn</a>
+
+				<ul class="dropdown_list">
+					<li><a href="chapter.html">Fender Fundamentals</a></li>
+					<li><a href="chapter.html">Electric Guitar</a></li>
+					<li><a href="chapter.html">Bass Guitar</a></li>
+					<li><a href="chapter.html">Amplifiers</a></li>
+					<li><a href="chapter.html">Acoustics</a></li>
+					<li><a href="chapter.html">Folk & Bluegrass</a></li>
+					<li><a href="chapter.html">Limited Edition</a></li>
+					<li><a href="#">+ See All</a></li>
+				</ul><!-- /.dropdown_list -->
+			</li>
+			<li class="dropdown">
+				<a class="nav_item dropdown_btn page-btn" href="latest.html">Latest</a>
+
+				<ul class="dropdown_list">
+					<li><a href="latest-category.html">Video</a></li>
+					<li><a href="latest-category.html">Products</a></li>
+					<li><a href="latest-category.html">Events</a></li>
+					<li><a href="latest-category.html">Spotlight</a></li>
+					<li><a href="latest-category.html">Rewards</a></li>
+					<li><a href="latest-archive.html">Archive</a></li>
+				</ul><!-- /.dropdown_list -->
+			</li>
+			<li class="dropdown">
+				<a class="nav_item dropdown_btn page-btn" href="resources.html">Resources</a>
+
+				<ul class="dropdown_list">
+					<li><a href="resources-calendar.html">Calendar</a></li>
+					<li><a href="resources-events.html">Events</a></li>
+				</ul><!-- /.dropdown_list -->
+			</li>
+			<li class="nonDropdown"><a class="nav_item page-btn" href="learn.html">Support</a></li>
+		</ul>
+	</nav><!-- /.mainNav -->
+
+	<nav id="user-nav" class="nav nav-user nav-head">
+		<h2 class="meta">User Navigation</h2>
+
+		<div class="dropdown nav_module nav_avatar">
+		
+			<!-- .avatar element can have classes gold, silver, or bronze to show different pick outlines -->
+			<figure class="avatar">
+				<img class="avatar_img" src="/assets/img/uploads/user-lg-01.jpg" width="32" height="32" alt="My avatar" />
+			</figure>
+
+			<span class="nav_item dropdown_btn"><span class="nav_uname">Adam</span></span>
+
+			<ul class="dropdown_list">
+				<li><a href="dashboard.html">Dashboard</a></li>
+				<li><a href="account.html">My Account</a></li>
+				<li><a href="#">Log Out</a></li>
+			</ul>
+		</div><!-- /.nav_avatar -->
+
+		<div class="nav_module nav_iq">
+			<div class="iq" data-pct="60">
+				<strong class="nav_iq_title iq_title">My Fender IQ</strong>
+
+				<div class="canvIq iq_img" data-iq="110" data-goal="200" data-size="35" data-dots="no">
+					<span class="iq_lbl tertiary">102</span>
+				</div>
+			</div><!-- /.iq -->
+		</div><!-- /.nav_iq -->
+	</nav><!-- /.userNav -->
+</header><!-- /#page-head -->
+			<section id="main" role="main">
+					<!-- LESSON BANNER VARIATION 1 -->
+	<div class="banner banner-lesson bg lesson_section">
+		<figure class="banner_bg bg_img">
+			<img src="/assets/img/uploads/banner-04.jpg" alt="Image description" />
+		</figure>
+
+		<div class="banner_wrapper wrapper lesson_copy">
+			<div class="banner_copy">
+				<span class="banner_tag tertiary">Lesson Subtitle</span>
+				<h1 class="banner_title">Bassbreaker™ Amplifier Series</h1>
+				<p class="banner_body">In this lesson, you’ll dive deep into our latest exploration in sfeafd samplification—the Bassbreaker series. the Bassbreaker series.</p>
+
+				<ul class="banner_stats stats_list">
+					<li>Identify ideal customers</li>
+					<li>Explain how Bassbreaker has evolved</li>
+					<li>Demonstrate the compatibility of heads and cabinets</li>
+					<li>Compare the features across individual models</li>
+				</ul>
+
+				<a class="btn btn-alt js-modal-btn" href="quiz.html">Take Lesson Quiz</a>
+				<a class="btn btn-alt js-modal-btn" href="quiz.html">Take Chapter Quiz</a>
+
+				<a class="banner_scroll tertiary" href="#lesson"><i class="banner_scroll_icn">d</i>Scroll to Start Lesson</a>
+			</div><!-- /.banner_copy -->
+		</div><!-- /.banner_wrapper -->
+	</div><!-- /.banner -->
+
+	<!-- LESSON BANNER VARIATION 2 -->
+	<!-- <div class="banner banner-lesson banner-lesson-alt overlay bg lesson_section">
+		<figure class="banner_bg bg_img">
+			<img src="/assets/img/uploads/banner-05.jpg" alt="Image description" />
+		</figure>
+
+		<div class="banner_wrapper wrapper lesson_copy">
+			<div class="banner_copy">
+				<span class="banner_tag tertiary">How It All Began</span>
+				<h1 class="banner_title">Fender Origins</h1>
+				<p class="banner_body">Objective intro summary. Lorem ipsum dolor sit amet, consectetur  dolor esta mostre adipisicing elit, sed do eiusmod dolor sit amet.</p>
+
+				<ul class="banner_stats stats_list">
+					<li>Identify ideal customers</li>
+					<li>Explain how Bassbreaker has evolved</li>
+					<li>Demonstrate the compatibility of heads and cabinets</li>
+					<li>Compare the features across individual models</li>
+				</ul>
+
+				<a class="btn btn-alt js-modal-btn" href="quiz.html">Take Lesson Quiz</a>
+				<a class="btn btn-alt js-modal-btn" href="quiz.html">Take Chapter Quiz</a>
+
+				<a class="banner_scroll tertiary" href="#lesson"><i class="banner_scroll_icn">d</i>Scroll to Start Lesson</a>
+			</div>
+		</div>
+	</div> -->
+
+	<!-- LESSON BANNER VARIATION 3 -->
+	<!-- <div class="banner banner-lesson banner-lesson-alt2 bg lesson_section">
+		<figure class="banner_bg bg_img">
+			<img src="/assets/img/uploads/banner-06.jpg" alt="Image description" />
+		</figure>
+
+		<div class="banner_wrapper wrapper lesson_copy">
+			<div class="banner_copy">
+				<span class="banner_tag tertiary">Lesson Subtitle</span>
+				<h1 class="banner_title">Title of Lesson</h1>
+				<p class="banner_body">Objective intro summary. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+
+				<ul class="banner_stats stats_list">
+					<li>Identify ideal customers</li>
+					<li>Explain how Bassbreaker has evolved</li>
+					<li>Demonstrate the compatibility of heads and cabinets</li>
+					<li>Compare the features across individual models</li>
+				</ul>
+
+				<a class="btn btn-alt js-modal-btn" href="quiz.html">Take Lesson Quiz</a>
+				<a class="btn btn-alt js-modal-btn" href="quiz.html">Take Chapter Quiz</a>
+
+				<a class="banner_scroll tertiary" href="#lesson"><i class="banner_scroll_icn">d</i>Scroll to Start Lesson</a>
+			</div>
+		</div>
+	</div> -->
+
+	<nav class="lesson_nav lesson_section">
+		<div class="lesson_nav_head">
+			<a class="pageLink pageLink-back tertiary" href="chapter.html">Back to Learn</a>
+			<h6 class="lesson_nav_hdg h7">New Products</h6>
+		</div><!-- /.lesson_nav_head -->
+
+		<ul class="lesson_list">
+			<li><a class="lesson_link" href="lesson.html">Acoustic Pro Amplifier</a></li>
+			<li><a class="lesson_link" href="lesson.html">American Elite Electric Guitar</a></li>
+			<li><a class="lesson_link current" href="lesson.html">Bassbreaker Amplifier</a></li>
+			<li><a class="lesson_link" href="lesson.html">George Benson Signature Amplifier</a></li>
+			<li><a class="lesson_link" href="lesson.html">Paramount Acoustic</a></li>
+			<li><a class="lesson_link" href="lesson.html">The Edge Signature Amplifier</a></li>
+			<li><a class="lesson_link" href="lesson.html">The Edge Stratocaster</a></li>
+			<li><a class="lesson_link complete js-modal-btn" href="test.html">Chapter Test</a></li>
+		</ul><!-- /.lesson_list -->
+	</nav><!-- /.lesson_nav -->
+
+	<div class="page">
+		<section id="section-01" class="module module-basic module-left lesson_section bg">
+			<figure class="module_bg bg_img">
+				<img src="/assets/img/uploads/lesson-01.jpg" alt="Image description" />
+			</figure>
+
+			<div class="module_wrapper wrapper lesson_copy">
+				<div class="module_copy bg_copy">
+					<span class="module_date">1954 Date Style</span>
+					<h2 class="module_hdg">Introduced in 1954</h2>
+
+					<div class="module_body copy">
+						<p>The Stratocaster was made famous in the hands of music royalty, from Eric Clapton to Jimi Hendrix and countless more. The Strat is more than an instrument—it’s an icon with a timeless shape and unforgettable sound.</p>
+					</div><!-- /.section_body -->
+				</div><!-- /.module_copy -->
+			</div><!-- /.module_wrapper -->
+
+			<span class="module_caption">Buddy Guy</span>
+		</section><!-- /.lesson_section -->
+
+		<section id="section-02" class="module module-basic module-right lesson_section bg">
+			<figure class="module_bg bg_img">
+				<img src="/assets/img/uploads/lesson-02.jpg" alt="Image description" />
+			</figure>
+
+			<div class="module_wrapper wrapper lesson_copy">
+				<div class="module_copy bg_copy">
+					<span class="module_tag">Section Title Style</span>
+					<h2 class="module_hdg">Knows no Musical Boundaries</h2>
+
+					<div class="module_body copy">
+						<p>Fender electric guitars have proven their immense worth over time across the musical spectrum, whether it be on a classic rock song, a blues song, a metal song, a punk song, an indie pop song, a country song, an R&B song, a funk song, a jazz song, an Americana song, a Latin song, and just about any other genre conceivable.</p>
+					</div><!-- /.section_body -->
+
+					<a class="btn btn-more" href="#section-02-more">Learn More</a>
+				</div><!-- /.module_copy -->
+			</div><!-- /.module_wrapper -->
+
+			<span class="module_caption">Mike Duce</span>
+		</section><!-- /.lesson_section -->
+
+		<section id="section-03" class="module module-basic module-center lesson_section bg">
+			<figure class="module_bg bg_img">
+				<img src="/assets/img/uploads/lesson-03.jpg" alt="Image description" />
+			</figure>
+
+			<div class="module_wrapper wrapper lesson_copy">
+				<div class="module_copy bg_copy">
+					<span class="module_tag">Section Title Here</span>
+					<h2 class="module_hdg">Designed for the Spotlight</h2>
+
+					<div class="module_body copy">
+						<p>Some notable players include Jeff Beck, Eric Clapton, John Frusciante, Billy Corgan, Edge, Stevie Ray Vaughan, David Gilmour, Buddy Guy, Jimi Hendrix, John Mayer and Bruno Mars.</p>
+					</div><!-- /.section_body -->
+
+					<a class="vidLink js-modal-vid" href="video.html"><i class="vidLink_icn">v</i>Watch Video</a>
+				</div><!-- /.module_copy -->
+			</div><!-- /.module_wrapper -->
+
+			<span class="module_caption">Bruno Mars</span>
+		</section><!-- /.lesson_section -->
+
+		<section id="section-04" class="module module-half module-right lesson_section">
+			<figure class="module_img bg_img">
+				<img src="/assets/img/uploads/lesson-04.jpg" alt="Image description" />
+				<span class="module_caption">Nile Rodgers</span>
+			</figure>
+
+			<div class="module_wrapper wrapper lesson_copy">
+				<div class="module_copy bg_copy">
+					<span class="module_tag">Section Title Here</span>
+					<h2 class="module_hdg">Hear the Sound</h2>
+
+					<div class="module_body copy">
+						<p>General description about sound here on sectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut.enim ad minim veniam.</p>
+					</div><!-- /.section_body -->
+
+					<ul class="playlist">
+						<li class="playlist_audio">
+							<span class="playlist_title">Get Lucky</span>
+							<span class="playlist_artist tertiary">Nile Rodgers & Daft Punk Ft. Pharrell Williams</span>
+
+							<div class="audio">
+								<audio id="test" class="audio_content">
+									<source src="/assets/audio/audio-01.ogg" type="audio/ogg" />
+									<source src="/assets/audio/audio-01.mp3" type="audio/mpeg" />
+								</audio>
+							</div><!-- /.audio -->
+
+							<button class="playlist_btn audio_play"><span class="meta">Play/Pause</span></button>
+						</li>
+						<li class="playlist_audio">
+							<span class="playlist_title">Many of Horror</span>
+							<span class="playlist_artist tertiary">Biffy Clyro</span>
+
+							<div class="audio">
+								<audio id="test" class="audio_content">
+									<source src="/assets/audio/audio-02.ogg" type="audio/ogg" />
+									<source src="/assets/audio/audio-02.mp3" type="audio/mpeg" />
+								</audio>
+							</div><!-- /.audio -->
+
+							<button class="playlist_btn audio_play"><span class="meta">Play/Pause</span></button>
+						</li>
+						<li class="playlist_audio">
+							<span class="playlist_title">Damn Right I Got the Blues</span>
+							<span class="playlist_artist tertiary">Buddy Guy</span>
+
+							<div class="audio">
+								<audio id="test" class="audio_content">
+									<source src="/assets/audio/audio-03.ogg" type="audio/ogg" />
+									<source src="/assets/audio/audio-03.mp3" type="audio/mpeg" />
+								</audio>
+							</div><!-- /.audio -->
+
+							<button class="playlist_btn audio_play"><span class="meta">Play/Pause</span></button>
+						</li>
+					</ul><!-- /.playlist -->
+				</div><!-- /.module_copy -->
+			</div><!-- /.module_wrapper -->
+		</section><!-- /.lesson_section -->
+
+		<section id="section-05" class="module module-half module-left lesson_section">
+			<figure class="module_img bg_img">
+				<img src="/assets/img/uploads/lesson-05.jpg" alt="Image description" />
+				<span class="module_caption">Nile Rodgers</span>
+			</figure>
+
+			<div class="module_wrapper wrapper lesson_copy">
+				<div class="module_copy bg_copy">
+					<span class="module_tag">Section Title Here</span>
+					<h2 class="module_hdg">Hear the Sound</h2>
+
+					<div class="module_body copy">
+						<p>General description about sound here on sectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut.enim ad minim quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+						<ul>
+							<li>Duis aute irure dolor in reprehenderit in voluptated</li>
+							<li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
+							<li>Excepteur sint occaecat cupidatat non proident</li>
+							<li>Sunt in culpa qui officia deserunt mollit</li>
+							<li>Sed ut perspiciatis unde omnis iste natus error sit </li>
+						</ul>
+					</div><!-- /.section_body -->
+
+					<a class="downloadLink tertiary" href="#"><i class="downloadLink_icn goLink">f</i>Download Catalogue</a>
+				</div><!-- /.module_copy -->
+			</div><!-- /.module_wrapper -->
+		</section><!-- /.lesson_section -->
+
+		<section id="section-06" class="module module-half module-right bg lesson_section">
+			<figure class="module_img bg_img">
+				<img src="/assets/img/uploads/lesson-06.jpg" alt="Image description" />
+				<span class="module_caption">Nile Rodgers</span>
+			</figure>
+
+			<div class="module_wrapper wrapper lesson_copy">
+				<div class="module_copy bg_copy">
+					<span class="module_tag">Section Title Here</span>
+					<h2 class="module_hdg">Hear the Sound</h2>
+
+					<div class="module_body copy">
+						<p>General description about sound here on sectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut.enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+						<p>Viluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+					</div><!-- /.section_body -->
+
+					<span class="module_cta_hdg">Discover Additional Info CTA</span>
+					<a class="btn btn-more" href="#section-06-more">Learn More</a>
+				</div><!-- /.module_copy -->
+			</div><!-- /.module_wrapper -->
+		</section><!-- /.lesson_section -->
+
+		<div id="section-07" class="module module-gallery module-gallery-three lesson_section">
+			<div class="module_wrapper wrapper lesson_copy">
+				<div class="module_copy">
+					<figure class="module_img">
+						<img src="/assets/img/uploads/lesson-gallery-01.jpg" width="433" height="643" alt="Image description" />
+						<span class="module_caption">Yngwie Malmsteen</span>
+					</figure>
+
+					<figure class="module_img">
+						<img src="/assets/img/uploads/lesson-gallery-02.jpg" width="433" height="643" alt="Image description" />
+						<span class="module_caption">John Gomez</span>
+					</figure>
+
+					<figure class="module_img">
+						<img src="/assets/img/uploads/lesson-gallery-03.jpg" width="433" height="643" alt="Image description" />
+						<span class="module_caption">Eric Clapton</span>
+					</figure>
+				</div><!-- /.module_copy -->
+			</div><!-- /.module_wrapper -->
+		</div><!-- /.lesson_section -->
+	</div><!-- /.page -->
+			</section><!-- /#main -->
+
+			<footer id="page-foot" class="foot">
+	<div class="foot_wrapper">
+		<a class="brand brand-foot" href="/">
+			<img class="brand_img" src="/assets/img/global/logo.png" width="154" alt="The Fender Academy logo" />
+		</a><!-- /.brand -->
+
+		<nav class="nav nav-foot">
+			<h2 class="meta">Additional Navigation</h2>
+
+			<ul class="nav_list">
+				<li><a href="#">About Fender</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#">Terms & Conditions</a></li>
+			</ul>
+
+			<small class="copyright">Copyright © 2016 Fender Musical Instruments Corporation. All rights reserved.</small>
+		</nav><!-- /.nav -->
+
+		<a class="btn btn-alt btn-top foot_top" href="#page-head">Top</a>
+	</div><!-- /.foot_wrapper -->
+</footer><!-- /#page-foot -->
+			<!-- Site Scripts -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/lib/jquery.min.js"><\/script>')</script>
+<script type="text/javascript" src="/assets/js/plugins.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.min.js"></script>
+
+<!-- App Scripts -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.min.js"></script>
+<script type="text/javascript" src="/assets/js/app/controllers/triviaController.js"></script>		</div><!-- /.viewport -->
+
+	</body>
+</html>

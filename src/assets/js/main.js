@@ -139,6 +139,37 @@
 				}
 			});
 
+			// Audio
+			$('.audio').each(function(){
+				var track = Object.create(WaveSurfer);
+				var this = $(this),
+					file = $(this).find('source[type="audio/mpeg"]').attr('src');
+					playBtn = $(this).parent().find('.audio_play');
+
+				track.init({
+					barWidth: 2,
+					container: this,
+					cursorWidth: 0,
+					height: 60,
+					progressColor: '#d6d6d6',
+					waveColor: '#e5e5e5'
+				});
+
+				track.load(file);
+
+				$(this).append('<span class="audio_progress" style="width: 0; background: blue; height: 40px;"></span>')
+
+				playBtn.on('click', function(){
+					track.playPause();
+
+					if(track.isPlaying()) {
+						playBtn.addClass('pause');
+					} else {
+						playBtn.removeClass('pause');
+					}
+				});
+			});
+
 			// Videos
 			$('.vid').each(function(){
 				var video = $(this).find('.vid_content')[0],
@@ -330,6 +361,22 @@
 
 			$('.lms_more').on('click', function(){
 				$('.grid_item-inactive').show();
+			});
+		},
+	};
+
+	FENDER.lesson = {
+		init: function() {
+			var _this = this;
+
+			// Lesson Section Height
+			$('.lesson_section').each(function(){
+				var contentHeight = $(this).find('.lesson_copy').outerHeight(),
+					sectionHeight = $(this).outerHeight();
+
+				if(contentHeight > sectionHeight) {
+					$(this).height(contentHeight);
+				}
 			});
 		},
 	};

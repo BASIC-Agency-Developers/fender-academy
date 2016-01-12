@@ -142,6 +142,9 @@ p {
 
 // Lists
 .copy {
+	ol, ul {
+		margin-left: 1.25em;
+	}
 	ol {
 		&:not(.grid),
 		&:not(.latest_list) {
