@@ -12,6 +12,19 @@
 	right: 20px;
 	top: 3.214285714em; // 45px
 }
+.reward {
+	position: relative;
+
+	&.sized {
+		.reward_meta {
+			bottom: 0;
+			left: 0;
+			padding: 0 10px;
+			position: absolute;
+			width: 100%;
+		}
+	}
+}
 .reward_img {
 	margin-bottom: 15px;
 	position: relative;
@@ -51,6 +64,10 @@
 }
 .reward_title {
 	margin-bottom: 2.285714286em // 32px
+}
+.reward_btn {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 }
 .reward_note {
 	color: $text-xlt;
@@ -146,22 +163,6 @@
 	.rewards_all {
 		display: inline-block;
 		position: static;
-	}
-	.reward {
-		text-align: center;
-
-		.btn {
-			display: block;
-		}
-		.btn-blank {
-			margin-top: -6px;
-			padding: 3px 0;
-		}
-	}
-	.reward_note {
-		&:before {
-			display: none;
-		}
 	}
 
 	// Slider

@@ -72,7 +72,10 @@
 	letter-spacing: .07em;
 }
 .feed_title {
+	overflow: hidden;
+	text-overflow: ellipsis;
 	text-transform: uppercase;
+	white-space: nowrap;
 }
 
 // Navigation
@@ -165,9 +168,9 @@
 			&:first-child {
 				border-left: none;
 			}
-			+ li {
-				margin-left: -4px;
-			}
+			// + li {
+			// 	margin-left: -4px;
+			// }
 		}
 	}
 	.feed_link {

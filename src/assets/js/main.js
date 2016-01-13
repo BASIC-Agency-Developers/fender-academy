@@ -318,7 +318,7 @@
 				],
 				slidesToShow: 4,
 				slidesToScroll: 4,
-				speed: 500,
+				speed: 300,
 			});
 		}
 	};
@@ -336,10 +336,18 @@
 
 			$(window).resize(function(){
 				if($(window).width() > 768) {
-					_this.feedSlider();
-				} else {
+					if(!$('.feed_list').hasClass('slick-initialized')) {
+						_this.feedSlider();
+					}
+				} else if($('.feed_list').hasClass('slick-initialized')) {
 					$('.feed_list').slick('unslick');
 				}
+			});
+
+			_this.rewardsHeight();
+
+			$(window).resize(function(){
+				_this.rewardsHeight();
 			});
 		},
 		feedSlider: function(){
@@ -348,10 +356,36 @@
 				infinite: false,
 				prevArrow: $('.feed .feed_prev'),
 				nextArrow: $('.feed .feed_next'),
+				responsive: [
+					{
+						breakpoint: 1024,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 3
+						}
+					}
+				],
 				slidesToShow: 4,
 				slidesToScroll: 4,
-				speed: 500,
+				speed: 300,
 			});
+		},
+		rewardsHeight: function(){
+			var rewardHeight = 0;
+
+			$('.reward').removeClass('sized').css('height', 'auto');
+
+			setTimeout(function(){
+				$('.reward').each(function(){
+					var thisHeight = $(this).outerHeight();
+
+					if(thisHeight > rewardHeight) {
+						rewardHeight = thisHeight;
+					}
+				});
+
+				$('.reward').css('height', rewardHeight).addClass('sized');
+			}, 500);
 		}
 	};
 
