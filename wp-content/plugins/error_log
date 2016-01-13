@@ -1,0 +1,7 @@
+[04-Jan-2016 09:20:41 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/dev/public_html/fender/wp-content/plugins/notify_users.php on line 16
+[04-Jan-2016 09:22:45 UTC] PHP Fatal error:  Call to a member function get_var() on a non-object in /home/dev/public_html/fender/wp-content/plugins/notify_users.php on line 48
+[04-Jan-2016 09:23:24 UTC] PHP Warning:  Missing argument 2 for user_id_exists(), called in /home/dev/public_html/fender/wp-content/plugins/notify_users.php on line 16 and defined in /home/dev/public_html/fender/wp-content/plugins/notify_users.php on line 47
+[04-Jan-2016 09:23:24 UTC] PHP Fatal error:  Call to a member function get_var() on a non-object in /home/dev/public_html/fender/wp-content/plugins/notify_users.php on line 48
+[04-Jan-2016 09:23:47 UTC] PHP Warning:  Missing argument 2 for user_id_exists(), called in /home/dev/public_html/fender/wp-content/plugins/notify_users.php on line 16 and defined in /home/dev/public_html/fender/wp-content/plugins/notify_users.php on line 47
+[04-Jan-2016 09:23:47 UTC] PHP Fatal error:  Call to a member function get_var() on a non-object in /home/dev/public_html/fender/wp-content/plugins/notify_users.php on line 48
+[04-Jan-2016 09:26:05 UTC] PHP Parse error:  syntax error, unexpected 'the' (T_STRING) in /home/dev/public_html/fender/wp-content/plugins/notify_users.php on line 30
