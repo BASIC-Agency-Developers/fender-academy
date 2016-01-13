@@ -35,9 +35,21 @@ h5.callout_txt {
 	@extend %h5;
 }
 .callout_body {
-	font-size: rem(13);
-	line-height: 1.692307692em;
-	margin: -1.769230769em 0 1.307692308em;
+	margin: em(-24) 0 em(16);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	p {
+		font-size: rem(13);
+		line-height: 1.692307692em;
+		margin-bottom: .785714286em; // 11px
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
 
 /*-------------------------------------------

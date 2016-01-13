@@ -74,10 +74,11 @@
 	z-index: 1;
 
 	&:hover {
-		border: 2px solid transparentize($text-lt, .25);
-
 		.banner_back_icn {
 			color: $accent;
+		}
+		.banner_back_txt {
+			visibility: visible;
 		}
 	}
 }
@@ -94,6 +95,16 @@
 		@extend %center-both;
 		@extend %icn-fnt;
 	}
+}
+.banner_back_txt {
+	color: $white;
+	display: inline-block;
+	@extend %h8; // font-size: 12px
+	letter-spacing: .05em;
+	line-height: 36px;
+	padding-left: 4.166666667em; // 50px
+	visibility: hidden;
+	white-space: nowrap;
 }
 .banner_scroll {
 	color: $white;
@@ -336,7 +347,7 @@
 		text-align: center;
 
 		&:first-child {
-			padding: em(90) 0 em(33);
+			padding: em(91) 0 em(33);
 		}
 
 		.banner_tag {

@@ -59,6 +59,14 @@ ol.lessons {
 		border: 1px solid $text-lt;
 		padding: 14px 25px 13px;
 		margin-bottom: 10px;
+
+		&:hover {
+			border-color: $white;
+			box-shadow: inset -1px 0 0 0 $white,
+						inset 1px 0 0 0 $white,
+						inset 0 -1px 0 0 $white,
+						inset 0 1px 0 0 $white;
+		}
 	}
 	.multiChoice_opt:checked {
 		+ .multiChoice_lbl {
@@ -70,6 +78,72 @@ ol.lessons {
 						inset 0 1px 0 0 $accent;
 		}
 	}
+}
+
+/*-------------------------------------------
+  Sticky Nav
+-------------------------------------------*/
+.navBar {
+	border-bottom: 1px solid $grey-xlt;
+	box-shadow: 0 1px 2px 0 transparentize($grey, .85);
+	position: relative;
+}
+.navBar_back {
+	border-right: 1px solid $grey-xlt;
+	color: $grey;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 60px;
+
+	&:hover {
+		color: $accent;
+	}
+}
+.navBar_back_icn {
+	font-style: normal;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	@extend %center-vert;
+	@extend %icn-fnt;
+}
+.navBar_wrapper {
+	height: em(60);
+	max-width: em(1100);
+	overflow: hidden;
+}
+.navBar_current {
+	display: block;
+	font-size: rem(13);
+	font-weight: 800;
+	position: relative;
+	text-transform: uppercase;
+	@extend %center-vert;
+	@extend %align-left;
+
+	.tertiary {
+		color: $text-xlt;
+		display: block;
+		margin-bottom: .214285714em; // 3px
+	}
+}
+.navBar_status {
+	display: block;
+	position: relative;
+	@extend %center-vert;
+	@extend %align-left;
+}
+.navBar_btn {
+	padding-left: 10px;
+	padding-right: 10px;
+	position: relative;
+	text-align: center;
+	width: 12.142857143em; // 170px
+	@extend %center-vert;
+	@extend %align-right;
 }
 
 /*-------------------------------------------

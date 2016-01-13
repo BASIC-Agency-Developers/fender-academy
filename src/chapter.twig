@@ -16,17 +16,56 @@
 				<h3 class="banner_title">Electric Guitars</h3>
 			</div><!-- /.banner_copy -->
 
-			<a class="banner_back" href="learn.html"><span class="banner_back_icn"><span class="meta">Back to the Learn section</span></span></a>
+			<a class="banner_back" href="learn.html"><span class="banner_back_icn"><span class="banner_back_txt tertiary">Back to Learn</span></span></a>
 		</div><!-- /.banner_wrapper -->
 	</div><!-- /.banner -->
 
 	<div class="page chapter">
+		<!-- STATE: User hasn't taken the test (default) -->
+		<div class="navBar">
+			<a class="navBar_back" href="learn.html"><i class="navBar_back_icn">l</i><span class="meta">Back to Learn</span></a>
+
+			<div class="navBar_wrapper wrapper">
+				<span class="navBar_current">
+					<span class="tertiary">Chapter 02:</span>
+					Electric Guitars
+				</span>
+
+				<a class="navBar_btn btn js-modal-btn" href="test.html">Take Chapter Test</a>
+			</div><!-- /.navBar_wrapper -->
+		</div><!-- /.navBar -->
+
+		<!-- STATE: User has taken the test and cannot take it again yet -->
+		<div class="navBar">
+			<a class="navBar_back" href="learn.html"><i class="navBar_back_icn">l</i><span class="meta">Back to Learn</span></a>
+
+			<div class="navBar_wrapper wrapper">
+				<span class="navBar_status tertiary">Current Chapter Score <em class="accent">25/30</em></span>
+			</div>
+		</div>
+
+		<!-- STATE: User has taken the test and can take it again -->
+		<div class="navBar">
+			<a class="navBar_back" href="learn.html"><i class="navBar_back_icn">l</i><span class="meta">Back to Learn</span></a>
+
+			<div class="navBar_wrapper wrapper">
+				<span class="navBar_status tertiary">Current Chapter Score <em class="accent">25/30</em></span>
+				<a class="navBar_btn btn js-modal-btn" href="test.html">Retake Chapter Test</a>
+			</div>
+		</div>
+
 		<div class="intro chapter_intro">
 			<div class="lms_wrapper wrapper">
+				<!-- STATE: User hasn't taken the test (default) -->
 				<div class="intro_head">
 					<span class="intro_callout intro_callout-alt tertiary">Ready to test?</span>
 					<span class="intro_callout tertiary">Think you're ready for the Electric Guitar test?</span>
 					<a class="intro_btn btn js-modal-btn" href="test.html">Take Chapter Test</a>
+				</div><!-- /.intro_head -->
+
+				<!-- STATE: User has taken the test -->
+				<div class="intro_head">
+					<span class="intro_callout tertiary">Current Chapter Score <em class="accent">25/30</em></span>
 				</div><!-- /.intro_head -->
 
 				<div class="intro_copy copy">
@@ -46,6 +85,8 @@
 						<li>Learn about the Stratocaster history, features word</li>
 						<li>How to purchase a domain and hosting</li>
 						<li>Max number of points: 5, character count: 50</li>
+						<!-- STATE: User has taken test, points still available -->
+						<li><strong><em>Max number of points: 5</em></strong></li>
 					</ul>
 				</div><!-- /.intro_stats -->
 
@@ -58,6 +99,36 @@
 
 		<div id="learn" class="lms">
 			<div class="lms_wrapper wrapper">
+				<!-- STATE: Callout if the user has taken the test and cannot take it again yet -->
+				<aside class="callout bg">
+					<figure class="callout_bg bg_img">
+						<img src="{{ assets }}/img/uploads/callout-02.jpg" alt="Image description" />
+					</figure>
+
+					<div class="bg_copy">
+						<h5 class="callout_txt">You Scored <em class="accent">25/30</em> on this Test</h5>
+						<div class="callout_body">
+							<p>Tests reopen on the <strong>1st of every month</strong>.</p>
+							<p>Review the lessons to try and improve your score<br/> and increase your Fender IQ.</p>
+						</div>
+					</div>
+				</aside><!-- /.callout -->
+
+				<!-- STATE: Callout if the user has taken the test and can take it again -->
+				<aside class="callout bg">
+					<figure class="callout_bg bg_img">
+						<img src="{{ assets }}/img/uploads/callout-02.jpg" alt="Image description" />
+					</figure>
+
+					<div class="bg_copy">
+						<h5 class="callout_txt">You Scored <em class="accent">25/30</em> on this Test</h5>
+						<div class="callout_body">
+							<p>Think you can do better? Retake test to boost IQ and become Fender Certified!</p>
+						</div>
+						<a class="btn btn-solo js-modal-btn" href="test.html">Retake Chapter Test</a>
+					</div>
+				</aside><!-- /.callout -->
+
 				<ol class="lessons">
 					<li>
 						<article class="lesson card card-lesson">
@@ -199,6 +270,7 @@
 					</li>
 				</ol><!-- /.chapters -->
 
+				<!-- STATE: Callout if the user hasn't taken the test (default) -->
 				<aside class="callout bg">
 					<figure class="callout_bg bg_img">
 						<img src="{{ assets }}/img/uploads/callout-02.jpg" alt="Image description" />
@@ -206,7 +278,9 @@
 
 					<div class="bg_copy">
 						<h5 class="callout_txt">Ready to take the test on Electric Guitars?</h5>
-						<p class="callout_body">Test now to earn IQ and become Fender Certified!</p>
+						<div class="callout_body">
+							<p>Test now to earn IQ and become Fender Certified!</p>
+						</div>
 						<a class="btn btn-solo js-modal-btn" href="test.html">Take Chapter Test</a>
 					</div>
 				</aside><!-- /.callout -->
