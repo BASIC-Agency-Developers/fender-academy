@@ -91,6 +91,7 @@
 	}
 }
 .rewards_btn {
+	display: none!important;
 	margin-top: -115px;
 	position: absolute;
 	@extend %btn-reset;
@@ -108,6 +109,9 @@
 	right: -30px;
 }
 @include min-up(em(1300)) {
+	.rewards_btn {
+		display: block!important;
+	}
 	.rewards_prev {
 		left: -40px;
 	}
